@@ -6,11 +6,11 @@ using namespace std;
 int fibonacci_memo(int num);
 
 int fibonacci_memo(int num) {
-	static std::map<int, int> cache;
-	cache.insert(std::pair<int,int>(0,1));
-	cache.insert(std::pair<int,int>(1,1));
+	static map<int, int> cache;
+	cache.insert(pair<int,int>(0,1));
+	cache.insert(pair<int,int>(1,1));
 	auto found = cache.find(num);
-	if (found != std::end(cache)) {
+	if (found != end(cache)) {
 		return found->second;
 	}
 	int result = fibonacci_memo(num - 1) + fibonacci_memo(num - 2);
@@ -21,9 +21,9 @@ int fibonacci_memo(int num) {
 int main() {
 	clock_t tStart = clock();
 	int num;
-	std::cout << "i: ";
-	std::cin >> num;
+	cout << "i: ";
+	cin >> num;
 	int res = fibonacci_memo(num);
-	std::cout << num << "th fibonacci number: " << res << std::endl;
+	cout << num << "th fibonacci number: " << res << endl;
 	printf("Time taken: %.2fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
 }
