@@ -1,7 +1,7 @@
-use std::i8;
+use std::i64;
 use std::env;
 
-fn fibonacci(n: i8) -> i8 {
+fn fibonacci(n: i64) -> i64 {
 	if n <= 2 {
 		return n;	
 	}
@@ -10,7 +10,7 @@ fn fibonacci(n: i8) -> i8 {
 
 fn parse_input() {
 	if let Some(arg) = env::args().nth(1) {
-        if let Ok(x) = arg.parse::<i8>() { 
+        if let Ok(x) = arg.parse::<i64>() {
         	println!("{}", fibonacci(x));
         }
     }
