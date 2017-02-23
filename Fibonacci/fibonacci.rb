@@ -8,5 +8,14 @@ def fibonacci(n)
 	end
 end
 
+def fibonacci_memoized(n)
+	cache = { 0 => 0, 1 => 1 }
+	if cache.has_key?(n)
+		return cache.fetch(n)
+	end
+	cache[n] = fibonacci_memoized(n-2) + fibonacci_memoized(n-1)
+	return cache[n]
+end
+
 n = ARGV[0].to_i
-puts fibonacci(n)
+puts fibonacci_memoized(n)
