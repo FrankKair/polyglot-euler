@@ -1,6 +1,5 @@
 use std::i64;
 use std::env;
-use std::collections::HashMap;
 
 fn fibonacci(n: i64) -> i64 {
 	if n <= 2 {
