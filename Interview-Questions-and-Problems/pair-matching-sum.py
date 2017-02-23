@@ -12,6 +12,29 @@ def has_pair_with_sum_1(list, sum):
 				return True
 	return False
 
-list = [1, 2, 3, 4]
-print has_pair_with_sum_1(list, 6)
-print has_pair_with_sum_1(list, 8)
+# Complexity: O(n)
+def has_pair_with_sum_2(list, sum):
+	low = 0
+	high = len(list) - 1
+
+	while low != high:
+		s = list[low] + list[high]
+		if s == sum:
+			return True
+		if s > sum:
+			high -= 1
+		else:
+			low += 1
+	return False
+
+list = [-2, -1, 1, 2, 3, 4]
+
+print has_pair_with_sum_1(list, 4), has_pair_with_sum_2(list, 4)
+print has_pair_with_sum_1(list, 6), has_pair_with_sum_2(list, 6)
+print has_pair_with_sum_1(list, 8), has_pair_with_sum_2(list, 8)
+print has_pair_with_sum_1(list, 9), has_pair_with_sum_2(list, 9)
+print has_pair_with_sum_1(list, 10), has_pair_with_sum_2(list, 10)
+print has_pair_with_sum_1(list, 22), has_pair_with_sum_2(list, 22)
+print has_pair_with_sum_1(list, 0), has_pair_with_sum_2(list, 0)
+print has_pair_with_sum_1(list, -1), has_pair_with_sum_2(list, -1)
+print has_pair_with_sum_1(list, -5), has_pair_with_sum_2(list, -5)
