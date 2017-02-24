@@ -27,14 +27,22 @@ def has_pair_with_sum_2(list, sum):
 			low += 1
 	return False
 
+# Complexity: O(n) - Works for unordered lists
+def has_pair_with_sum_3(list, sum):
+	for number in list:
+		complement = sum - number
+		if complement in list and list.index(number) != list.index(complement):
+			return True
+	return False
+
 list = [-2, -1, 1, 2, 3, 4]
 
-print has_pair_with_sum_1(list, 4), has_pair_with_sum_2(list, 4)
-print has_pair_with_sum_1(list, 6), has_pair_with_sum_2(list, 6)
-print has_pair_with_sum_1(list, 8), has_pair_with_sum_2(list, 8)
-print has_pair_with_sum_1(list, 9), has_pair_with_sum_2(list, 9)
-print has_pair_with_sum_1(list, 10), has_pair_with_sum_2(list, 10)
-print has_pair_with_sum_1(list, 22), has_pair_with_sum_2(list, 22)
-print has_pair_with_sum_1(list, 0), has_pair_with_sum_2(list, 0)
-print has_pair_with_sum_1(list, -1), has_pair_with_sum_2(list, -1)
-print has_pair_with_sum_1(list, -5), has_pair_with_sum_2(list, -5)
+print has_pair_with_sum_1(list, 4), has_pair_with_sum_2(list, 4), has_pair_with_sum_3(list, 4)
+print has_pair_with_sum_1(list, 6), has_pair_with_sum_2(list, 6), has_pair_with_sum_3(list, 6)
+print has_pair_with_sum_1(list, 8), has_pair_with_sum_2(list, 8), has_pair_with_sum_3(list, 8)
+print has_pair_with_sum_1(list, 9), has_pair_with_sum_2(list, 9), has_pair_with_sum_3(list, 9)
+print has_pair_with_sum_1(list, 10), has_pair_with_sum_2(list, 10), has_pair_with_sum_3(list, 10)
+print has_pair_with_sum_1(list, 22), has_pair_with_sum_2(list, 22), has_pair_with_sum_3(list, 22)
+print has_pair_with_sum_1(list, 0), has_pair_with_sum_2(list, 0), has_pair_with_sum_3(list, 0)
+print has_pair_with_sum_1(list, -1), has_pair_with_sum_2(list, -1), has_pair_with_sum_3(list, -1)
+print has_pair_with_sum_1(list, -5), has_pair_with_sum_2(list, -5), has_pair_with_sum_3(list, -5)
