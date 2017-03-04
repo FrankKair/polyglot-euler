@@ -14,7 +14,7 @@ def fibonacci_memoized(n)
 		return cache.fetch(n)
 	end
 	cache[n] = fibonacci_memoized(n-2) + fibonacci_memoized(n-1)
-	return cache[n]
+	cache[n]
 end
 
 n = ARGV[0].to_i
