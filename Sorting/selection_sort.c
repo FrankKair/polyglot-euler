@@ -2,7 +2,7 @@
 
 void selection_sort(int A[], int n)
 {
-	for (int i = 0; i < sizeof(A)-1; i++)
+	for (int i = 0; i < n-1; i++)
 	{
 		int iMin = i;
 		for (int j = i+1; j < n; j++)
