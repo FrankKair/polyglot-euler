@@ -5,8 +5,12 @@ list = [3, 5, 24, 6, 2, 4, 8, 7]
 def merge_sort(list):
 	mid = len(list) // 2
 	if len(list) > 1:
-		left = list[:mid]
-		right = list[mid:]
+		left = []
+		right = []
+		for index in range(0, mid):
+			left.append(list[index])
+		for index in range(mid, len(list)):
+			right.append(list[index])
 		merge_sort(left)
 		merge_sort(right)
 		merge(left, right, list)
