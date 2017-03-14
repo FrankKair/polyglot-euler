@@ -1,21 +1,36 @@
 #!/usr/bin/env xcrun swift
 
-func mergeSort(array: [Int]) -> [Int] {
-	let mid = array.count / 2
-	guard array.count > 1 else { return array }
-
-	var leftArray = [Int]()
-	var rightArray = [Int]()
-
-	for index in 0..<mid {
-		leftArray.append(array[index])
-	}
-	for index in mid..<array.count {
-		rightArray.append(array[index])
-	}
-
-	return []
+func mergeSort(_ array: [Int]) -> [Int] {
+  guard array.count > 1 else { return array }
+  let middleIndex = array.count / 2
+  let leftArray = mergeSort(Array(array[0..<middleIndex]))
+  let rightArray = mergeSort(Array(array[middleIndex..<array.count]))
+  return merge(leftArray: leftArray, rightArray: rightArray)
 }
 
-let a = [3, 4, 1, 2, 6, 23, 12, 7]
-mergeSort(array: a)
+private func merge(leftArray: [Int], rightArray: [Int]) -> [Int] {
+  var i = 0
+  var j = 0
+  var ordered = [Int]()
+  while i < leftArray.count && j < rightArray.count {
+    if leftArray[i] < rightArray[j] {
+      ordered.append(leftArray[i])
+      i += 1
+    } else {
+      ordered.append(rightArray[j])
+      j += 1
+    } 
+  }
+  while i < leftArray.count {
+    ordered.append(leftArray[i])
+    i += 1
+  }
+  while j < rightArray.count {
+    ordered.append(rightArray[j])
+    j += 1
+  }
+  return ordered
+}
+
+let array = [3, 5, 24, 6, 2, 4, 8, 7]
+print(mergeSort(array))
