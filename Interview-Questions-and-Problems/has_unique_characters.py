@@ -16,3 +16,15 @@ def has_unique_characters_2(string):
 			return False
 		chars.append(char)
 	return True
+
+# Time and space complexity: O(n)
+def has_unique_characters_3(string):
+	chars = set()
+	for char in string:
+		if char in chars:
+			return False
+		chars.add(char)
+	return True
+
+def has_unique_characters_4(string):
+	return len(set(string)) == len(string)
