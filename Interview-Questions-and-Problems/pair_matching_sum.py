@@ -27,15 +27,15 @@ def has_pair_with_sum_2(list, sum):
 			low += 1
 	return False
 
-# Complexity: O(n) - Works for unordered lists
+# Complexity: O(n)
 def has_pair_with_sum_3(list, sum):
+	seen = set()
 	for number in list:
 		complement = sum - number
-		if complement in list and list.index(number) != list.index(complement):
+		if complement in seen:
 			return True
+		seen.add(number)
 	return False
-
-# TODO: Try a O(lg(n)) solution using binary search
 
 list = [-2, -1, 1, 2, 3, 4]
 
