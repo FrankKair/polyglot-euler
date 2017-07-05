@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 class Queue:
 	def __init__(self):
 		self.items = []
