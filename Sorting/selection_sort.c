@@ -1,14 +1,10 @@
 #include <stdio.h>
 
-void selection_sort(int A[], int n)
-{
-	for (int i = 0; i < n-1; i++)
-	{
+void selection_sort(int A[], int n) {
+	for (int i = 0; i < n-1; i++) {
 		int iMin = i;
-		for (int j = i+1; j < n; j++)
-		{
-			if (A[j] < A[iMin])
-			{
+		for (int j = i+1; j < n; j++) {
+			if (A[j] < A[iMin]) {
 				iMin = j;
 			}
 		}
@@ -26,10 +22,8 @@ int main(int argc, char const *argv[])
 	selection_sort(A, size);
 
 	// Prints elements
-	for (int i = 0; i < size; i++)
-	{
+	for (int i = 0; i < size; i++) {
 		printf("%d\n", A[i]);
 	}
-
 	return 0;
 }
