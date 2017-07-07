@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 def fibonacci(n)
 	case n
 	when 0 then 0
