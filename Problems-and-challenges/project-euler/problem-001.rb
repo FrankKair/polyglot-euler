@@ -5,10 +5,4 @@
 
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
-sum = 0
-1000.times do |i|
-  if i % 3 == 0 or i % 5 == 0
-    sum += i
-  end
-end
-puts sum
+puts ((0..999).select { |x| (x % 3 == 0) or (x % 5 == 0) }).reduce(:+)
