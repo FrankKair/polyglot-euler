@@ -7,11 +7,7 @@
 
 extension String {
     var reversed: String {
-        var reversed = ""
-        for char in self.characters {
-            reversed.insert(char, at: reversed.startIndex)
-        }
-        return reversed
+        return String(self.characters.reversed())
     }
 }
 
