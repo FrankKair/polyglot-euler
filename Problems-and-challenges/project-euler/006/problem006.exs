@@ -4,7 +4,7 @@ defmodule Problem006 do
 
 	def solve do
 		sum_of_the_squares = 0..100
-		|> Enum.map(fn(x) -> x * x end)
+		|> Enum.map(&square/1)
 		|> Enum.sum()
 
 		square_of_the_sum = 0..100
