@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 class Integer
   	def prime?
   		return false unless self > 1
