@@ -3,9 +3,10 @@
 func generatePrimesUpTo(_ number: Int) -> [Int] {
     var listOfNumbers = Set(2...number)
     for x in (2...number) {
-        let numbersToRemove = listOfNumbers.filter { $0 % x == 0 && $0 != 2 }
-        guard !numbersToRemove.isEmpty else { break }
-        listOfNumbers.subtract(numbersToRemove)
+        let numbersToRemove = listOfNumbers.filter { $0 % x == 0 && $0 != x }
+        if !numbersToRemove.isEmpty {
+        	listOfNumbers.subtract(numbersToRemove)
+    	}
     }
 
     return Array(listOfNumbers)
