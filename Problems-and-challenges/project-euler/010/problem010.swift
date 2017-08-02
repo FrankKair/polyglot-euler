@@ -1,4 +1,5 @@
 #!/usr/bin/env xcrun swift
+
 extension Int {
 	var squareRootInt: Int { return Int(Float(self).squareRoot()) }
 }

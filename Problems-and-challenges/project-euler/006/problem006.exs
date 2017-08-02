@@ -1,4 +1,5 @@
 #!/usr/bin/env elixir
+
 defmodule Problem006 do
 	defp square(x), do: x * x
 
