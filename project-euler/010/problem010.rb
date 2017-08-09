@@ -4,12 +4,8 @@ class Integer
 	def prime?
 		return false unless self > 1
 		(2..Math.sqrt(self)).any? do |x|
-			if x == self
-				next
-			end
-			if self % x == 0
-				return false
-			end
+			next if x == self
+			return false if self % x == 0
 		end
 		true
 	end
