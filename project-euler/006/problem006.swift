@@ -1,9 +1,8 @@
 #!/usr/bin/env xcrun swift
-
 extension Int {
-    var squared: Int {
-        return self * self
-    }
+  var squared: Int {
+    return self * self
+  }
 }
 
 let sumOfTheSquares = (0...100).map { $0 * $0 }.reduce(0, +)
