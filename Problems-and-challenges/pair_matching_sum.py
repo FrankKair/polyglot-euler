@@ -6,36 +6,36 @@
 
 # Complexity: O(n^2)
 def has_pair_with_sum_1(list, sum):
-	for i in range(0, len(list)):
-		for j in range(i+1, len(list)):
-			if list[i] + list[j] == sum:
-				return True
-	return False
+  for i in range(0, len(list)):
+    for j in range(i+1, len(list)):
+      if list[i] + list[j] == sum:
+        return True
+  return False
 
 # Complexity: O(n)
 def has_pair_with_sum_2(list, sum):
-	low = 0
-	high = len(list) - 1
+  low = 0
+  high = len(list) - 1
 
-	while low != high:
-		s = list[low] + list[high]
-		if s == sum:
-			return True
-		if s > sum:
-			high -= 1
-		else:
-			low += 1
-	return False
+  while low != high:
+    s = list[low] + list[high]
+    if s == sum:
+      return True
+    if s > sum:
+      high -= 1
+    else:
+      low += 1
+  return False
 
 # Complexity: O(n)
 def has_pair_with_sum_3(list, sum):
-	seen = set()
-	for number in list:
-		complement = sum - number
-		if complement in seen:
-			return True
-		seen.add(number)
-	return False
+  seen = set()
+  for number in list:
+    complement = sum - number
+    if complement in seen:
+      return True
+    seen.add(number)
+  return False
 
 list = [-2, -1, 1, 2, 3, 4]
 

@@ -1,35 +1,35 @@
 #!/usr/bin/env xcrun swift
 
 class Node {
-    let value: Int
-    var next: Node?
+  let value: Int
+  var next: Node?
 
-    init(value: Int, next: Node?) {
-        self.value = value
-        self.next = next
-    }
+  init(value: Int, next: Node?) {
+    self.value = value
+    self.next = next
+  }
 }
 
 func printList(head: Node?) {
-    var current = head
-    while current != nil {
-        print(current?.value ?? -1)
-        current = current?.next
-    }
+  var current = head
+  while current != nil {
+    print(current?.value ?? -1)
+    current = current?.next
+  }
 }
 
 func reverseList(head: Node?) -> Node? {
-    var currentNode = head
-    var prev: Node?
-    var next: Node?
+  var currentNode = head
+  var prev: Node?
+  var next: Node?
 
-    while currentNode != nil {
-        next = currentNode?.next
-        currentNode?.next = prev
-        prev = currentNode
-        currentNode = next
-    }
-    return prev
+  while currentNode != nil {
+    next = currentNode?.next
+    currentNode?.next = prev
+    prev = currentNode
+    currentNode = next
+  }
+  return prev
 }
 
 let nodeThree = Node(value: 3, next: nil)

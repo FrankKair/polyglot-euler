@@ -2,32 +2,32 @@
 
 // Complexity O(n) - Ordered lists only
 func hasPairWithSum(list: [Int], sum: Int) -> Bool {
-    var low = 0
-    var high = list.count-1
+  var low = 0
+  var high = list.count-1
 
-    while low != high {
-        let s = list[low] + list[high]
-        if s == sum {
-            return true
-        }
-        if s > sum {
-            high -= 1
-        } else {
-            low += 1
-        }
+  while low != high {
+    let s = list[low] + list[high]
+    if s == sum {
+      return true
+    }
+    if s > sum {
+      high -= 1
+      } else {
+        low += 1
+      }
     }
     return false
 }
 
 //Complexity: O(n) - Works for unordered lists
 func hasPairWithSum2(list: [Int], sum: Int) -> Bool {
-    for number in list {
-        let complement = sum - number
-        if list.contains(complement) && list.index(of: number) != list.index(of: complement) {
-            return true
-        }
+  for number in list {
+    let complement = sum - number
+    if list.contains(complement) && list.index(of: number) != list.index(of: complement) {
+      return true
     }
-    return false
+  }
+  return false
 }
 
 let list = [-2, -1, 1, 2, 3, 4]
