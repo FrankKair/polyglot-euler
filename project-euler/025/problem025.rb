@@ -1,18 +1,10 @@
 #!/usr/bin/env ruby
+number = 3
+a = 1
+b = 2
 
-# Memoization - Dynamic Programming
-# Naive and slow
-def fibonacci_memoized(n)
-  cache = { 0 => 0, 1 => 1 }
-  if cache.has_key?(n)
-    return cache.fetch(n)
-  end
-  cache[n] = fibonacci_memoized(n-2) + fibonacci_memoized(n-1)
-  cache[n]
-end
-
-number = 2
-while fibonacci_memoized(number).to_s.size < 1000
+while b.to_s.length < 1000
+  a, b = b, a + b
   number += 1
 end
 puts number
