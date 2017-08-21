@@ -16,7 +16,7 @@ end
 (0..425).each do |a|
   (a..425).each do |b|
     (b..425).each do |c|
-      if is_pythagorean(a, b, c) and sums_up_to_1000(a, b, c)
+      if is_pythagorean(a, b, c) && sums_up_to_1000(a, b, c)
         puts a * b * c
       end
     end
