@@ -1,9 +1,8 @@
 fn main() {
-  let mut sum = 0;
-  for x in 0..1000 {
-    if x % 3 == 0 || x % 5 == 0 {
-      sum += x;
-    }
-  }
-  println!("{:?}", sum);
+  let sum = (0..1000)
+            .into_iter()
+            .filter(|&x| x % 3 == 0 || x % 5 == 0)
+            .fold(0, |acc, x| acc + x);
+
+  println!("{}", sum);
 }
