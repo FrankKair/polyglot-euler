@@ -1,17 +1,12 @@
 #!/usr/bin/env elixir
 defmodule Problem003 do
-  def prime?(2), do: true
-  def prime?(n) do
-    upper_bound = n |> :math.sqrt
-                    |> Float.ceil
-                    |> trunc
-    not_prime = 2..upper_bound
-                |> Enum.any?(fn(x) -> rem(n, x) == 0 end)
-    !not_prime
+  def prime?(x) when x in [2, 3, 7, 11, 13, 17], do: true
+  def prime?(x) do
+    Enum.all?((2..round(:math.sqrt(x))), fn(n) -> rem(x, n) != 0 end)
   end
 
   def factors(n) do
-    1..n
+    1..round(:math.sqrt(n))
     |> Enum.filter(fn(x) -> rem(n, x) == 0 end)
   end
 
