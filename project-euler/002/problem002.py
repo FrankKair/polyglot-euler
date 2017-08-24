@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 total = 0
 a = 1
 b = 2

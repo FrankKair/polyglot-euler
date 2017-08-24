@@ -1,5 +1,4 @@
 #!/usr/bin/env xcrun swift
-
 extension String {
   var reversed: String {
     return String(self.characters.reversed())

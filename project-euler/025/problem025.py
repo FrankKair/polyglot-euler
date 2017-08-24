@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 index = 3
 a = 1
 b = 2

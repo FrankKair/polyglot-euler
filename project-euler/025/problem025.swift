@@ -1,5 +1,4 @@
 #!/usr/bin/env xcrun swift
-
 var index = 3
 var a: Double = 1
 var b: Double = 2

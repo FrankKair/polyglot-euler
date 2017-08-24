@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 def square(number):
   return number * number
 

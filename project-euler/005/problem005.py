@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 def divisible_to(number, upper_bound):
   for x in range(1, upper_bound):
     if number % x != 0:

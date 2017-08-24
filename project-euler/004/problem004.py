@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 def is_palindrome(x):
   return str(x)[::-1] == str(x)
 

@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 sum = 0
 a = 1
 b = 2
