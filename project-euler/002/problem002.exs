@@ -8,7 +8,7 @@ defmodule Problem002 do
     fibonacci_sequence()
     |> Stream.take_while(&(&1 < 4000000))
     |> Stream.filter(&(rem(&1, 2) == 0))
-    |> Enum.sum
+    |> Enum.reduce(&+/2)
   end
 end
 
