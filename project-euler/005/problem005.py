@@ -1,11 +1,14 @@
 #!/usr/bin/env python
-def divisible_to(number, upper_bound):
-  for x in range(1, upper_bound):
-    if number % x != 0:
-      return False
-  return True
+def greatest_common_divisor(a, b):
+  while b:
+    a, b = b, a % b
+  return a
 
-x = 1
-while not divisible_to(x, 20):
-  x += 1
-print x
+def least_common_multiple(a, b):
+  return a * b // greatest_common_divisor(a, b)
+
+def lcm_of_sequence(seq):
+  return reduce(least_common_multiple, seq)
+
+# Smallest number evenly divisible by all numbers from 1 to 20.
+print lcm_of_sequence(range(1, 20))
