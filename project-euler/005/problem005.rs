@@ -1,11 +1,19 @@
-fn is_divisible_up_to(input: i64, upper_bound: i64) -> bool {
-  !(1..upper_bound).any (|x| input % x != 0)
+fn greatest_common_divisor(a: i64, b: i64) -> i64 {
+  let mut a = a;
+  let mut b = b;
+  while b != 0 {
+    let module = a % b;
+    a = b;
+    b = module;
+  }
+  return a;
+}
+
+fn least_common_multiple(a: i64, b: i64) -> i64 {
+  return a * b / greatest_common_divisor(a, b);
 }
 
 fn main() {
-  let mut number = 1;
-  while !is_divisible_up_to(number, 20) {
-    number += 1;
-  }
-  println!("{}", number);
+  let x = (1..20).fold(1, |acc, x| least_common_multiple(acc, x));
+  println!("{}", x);
 }
