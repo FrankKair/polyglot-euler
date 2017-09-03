@@ -1,17 +1,15 @@
 #!/usr/bin/env elixir
 defmodule Problem005 do
-  defp increasing_sequence do
-    Stream.iterate(10, &(&1 + 1))
-  end
+  defp gcd(x, 0), do: x
+  defp gcd(x, y), do: gcd(y, rem(x, y))
 
-  defp is_divisible_up_to_20(input) do
-    1..20
-    |> Enum.all?(fn(x) -> rem(input, x) == 0 end)
+  defp lcm(x, y) do
+    x * y / gcd(x, y)
   end
 
   def solve do
-    increasing_sequence()
-    |> Enum.find(&is_divisible_up_to_20/1)
+    1..20
+    |> Enum.reduce(fn(x, acc) -> round(lcm(x, acc)) end)
   end
 end
 
