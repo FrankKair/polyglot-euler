@@ -10,12 +10,11 @@ class Integer
   end
 
   def factors
-    (1..Math.sqrt(self)).select { |x| self % x == 0 }.reduce([]) do |list, number|
+    (1..Math.sqrt(self)).select { |x| (self % x).zero? }.each_with_object([]) do |number, list|
       list << number
       list << self / number unless self == number
-      list
     end
   end
 end
 
-puts 600851475143.factors.select { |x| x.prime? }.max
+puts 600_851_475_143.factors.select(&:prime?).max

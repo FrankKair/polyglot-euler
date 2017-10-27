@@ -5,16 +5,13 @@ class Integer
   end
 
   def factors
-    (1..Math.sqrt(self)).select { |i| self % i == 0 }.reduce([]) do |list, number|
+    (1..Math.sqrt(self)).select { |i| (self % i).zero? }.each_with_object([]) do |number, list|
       list << number
       list << self / number unless self / number == number
-      list
     end
   end
 end
 
 x = 1
-while x.triangle_number.factors.count < 500
-  x += 1
-end
+x += 1 while x.triangle_number.factors.count < 500
 puts x.triangle_number

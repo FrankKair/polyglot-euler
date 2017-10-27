@@ -4,10 +4,10 @@ class Integer
     return false unless self > 1
     (2..Math.sqrt(self)).any? do |x|
       next if x == self
-      return false if self % x == 0
+      return false if (self % x).zero?
     end
     true
   end
 end
 
-puts (0..2000000).select { |x| x.prime? }.reduce(:+)
+puts (0..2_000_000).select(&:prime?).reduce(:+)
