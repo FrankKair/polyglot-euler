@@ -11,6 +11,7 @@ def generate_collatz_sequence_starting_at(number):
     list_of_numbers.append(next_num)
     return list_of_numbers
 
+
 size_of_longest_sequence = 0
 largest_starting_number = 0
 number = 1

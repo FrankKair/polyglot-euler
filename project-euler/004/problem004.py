@@ -2,6 +2,7 @@
 def is_palindrome(x):
     return str(x)[::-1] == str(x)
 
+
 largest_sum = 0
 
 for x in range(0, 1000):

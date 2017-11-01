@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+
 def merge_sort(list):
     mid = len(list) // 2
     if len(list) > 1:
@@ -13,6 +14,7 @@ def merge_sort(list):
         merge_sort(right)
         merge(left, right, list)
         return list
+
 
 def merge(left, right, list):
     i = 0
@@ -34,6 +36,7 @@ def merge(left, right, list):
         list[k] = right[j]
         j += 1
         k += 1
+
 
 list = [3, 5, 24, 6, 2, 4, 8, 7]
 print merge_sort(list)

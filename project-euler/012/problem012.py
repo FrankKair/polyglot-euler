@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 import math
 
+
 def triangle_number(x):
     return sum(range(0, x + 1))
 
+
 def square_root_as_int(x):
     return int(math.sqrt(x))
+
 
 def factors(number):
     factors = set()
@@ -14,6 +17,7 @@ def factors(number):
             factors.add(number / x)
             factors.add(x)
     return factors
+
 
 x = 1
 while len(factors(triangle_number(x))) < 500:
