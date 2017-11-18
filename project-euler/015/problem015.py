@@ -5,8 +5,8 @@ import math
 
 # n = steps
 # k = grid size
-def binomial_coefficient(n, k):
+def combination(n, k):
     return math.factorial(n) // (math.factorial(k) * (math.factorial(n - k)))
 
 
-print binomial_coefficient(40, 20)
+print combination(40, 20)
