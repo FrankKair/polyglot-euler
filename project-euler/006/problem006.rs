@@ -1,5 +1,5 @@
 fn square(n: i64) -> i64 {
-    return n * n;
+    n * n
 }
 
 fn main() {

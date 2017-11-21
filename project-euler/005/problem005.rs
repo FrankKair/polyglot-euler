@@ -10,7 +10,7 @@ fn greatest_common_divisor(a: i64, b: i64) -> i64 {
 }
 
 fn least_common_multiple(a: i64, b: i64) -> i64 {
-    return a * b / greatest_common_divisor(a, b);
+    a * b / greatest_common_divisor(a, b)
 }
 
 fn main() {
