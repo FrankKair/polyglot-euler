@@ -10,8 +10,12 @@ defmodule Problem015 do
     factorial(n) / (factorial(k) * factorial(n - k))
   end
 
+  defp count_routes(k) do
+    round(combination(2 * k, k))
+  end
+
   def solve do
-    round(combination(40, 20))
+    count_routes(20)
   end
 end
 
