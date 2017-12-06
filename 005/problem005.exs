@@ -2,10 +2,7 @@
 defmodule Problem005 do
   defp gcd(x, 0), do: x
   defp gcd(x, y), do: gcd(y, rem(x, y))
-
-  defp lcm(x, y) do
-    x * y / gcd(x, y)
-  end
+  defp lcm(x, y), do: x * y / gcd(x, y)
 
   def solve do
     1..20

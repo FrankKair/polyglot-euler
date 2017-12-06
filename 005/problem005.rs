@@ -2,9 +2,9 @@ fn greatest_common_divisor(a: i64, b: i64) -> i64 {
     let mut a = a;
     let mut b = b;
     while b != 0 {
-      let module = a % b;
-      a = b;
-      b = module;
+        let module = a % b;
+        a = b;
+        b = module;
     }
     return a;
 }
