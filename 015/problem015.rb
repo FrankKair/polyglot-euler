@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 class Integer
   def factorial
-    return 1 if self.zero?
+    return 1 if zero?
     return 1 if self == 1
     self * (self - 1).factorial
   end

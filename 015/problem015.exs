@@ -6,17 +6,11 @@ defmodule Problem015 do
 
   # n = steps
   # k = grid size
-  defp combination(n, k) do
-    factorial(n) / (factorial(k) * factorial(n - k))
-  end
+  defp combination(n, k), do: factorial(n) / (factorial(k) * factorial(n - k))
 
-  defp count_routes(k) do
-    round(combination(2 * k, k))
-  end
+  defp count_routes(k), do: round(combination(2 * k, k))
 
-  def solve do
-    count_routes(20)
-  end
+  def solve, do: count_routes(20)
 end
 
 IO.puts Problem015.solve
