@@ -6,3 +6,4 @@
 - Ruby
 - Elixir
 - Swift
+- Crystal
