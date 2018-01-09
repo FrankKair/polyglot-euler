@@ -14,7 +14,7 @@ extension Int {
 var largest = 0
 for x in (100...999) {
     for y in (100...999) {
-        let product = x*y
+        let product = x * y
         if product > largest && product.isPalindrome {
             largest = product
         }
