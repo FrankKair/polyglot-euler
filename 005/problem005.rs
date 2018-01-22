@@ -14,6 +14,6 @@ fn least_common_multiple(a: i64, b: i64) -> i64 {
 }
 
 fn main() {
-    let x = (1..20).fold(1, |acc, x| least_common_multiple(acc, x));
-    println!("{}", x);
+    let result = (1..20).fold(1, |acc, x| least_common_multiple(acc, x));
+    println!("{}", result);
 }
