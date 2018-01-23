@@ -1,8 +1,10 @@
-def square(number) : Int
-  number * number
+struct Int
+  def square : Int
+    self * self
+  end
 end
 
-squared_sum = (0..100).map { |x| square(x) }.reduce { |sum, number| sum + number }
-square_of_the_sum = square((0..100).reduce { |sum, number| sum + number })
+squared_sum = (0..100).map(&.square).sum
+square_of_the_sum = (0..100).sum.square
 
 puts square_of_the_sum - squared_sum
