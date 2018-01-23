@@ -7,5 +7,6 @@ extension Int {
 
 let sumOfTheSquares = (0...100).map { $0.squared }.reduce(0, +)
 let squareOfTheSum = (0...100).reduce(0, +).squared
+let result = squareOfTheSum - sumOfTheSquares
 
-print(squareOfTheSum - sumOfTheSquares)
+print(result)
