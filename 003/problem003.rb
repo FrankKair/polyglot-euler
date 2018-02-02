@@ -4,7 +4,7 @@ class Integer
     return false unless self > 1
     (2..Math.sqrt(self)).any? do |x|
       next if x == self
-      return false if self % x == 0
+      return false if (self % x).zero?
     end
     true
   end
