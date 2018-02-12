@@ -8,11 +8,10 @@ fn main() {
     for a in 0..500 {
         for b in 0..500 {
             let c = 1000 - a - b;
-            if is_pythagorean_triplet(a, b, c) {
-                let sum = a + b + c;
-                if sum == 1000 {
-                    product = a * b * c;
-                }
+            let sum = a + b + c;
+            if is_pythagorean_triplet(a, b, c) && sum == 1000 {
+                product = a * b * c;
+                break;
             }
         }
     }
