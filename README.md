@@ -2,8 +2,10 @@
 
 [Project Euler](https://projecteuler.net) solutions in different programming languages.
 
-- Rust
-- Ruby
-- Elixir
-- Swift
 - Crystal
+- Elixir
+- Erlang
+- JavaScript
+- Ruby
+- Rust
+- Swift
