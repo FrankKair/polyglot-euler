@@ -1,11 +1,11 @@
 #!/usr/bin/env elixir
 defmodule Problem003 do
-  def prime?(x) when x in [2, 3, 7, 11, 13, 17], do: true
-  def prime?(x) do
+  defp prime?(x) when x in [2, 3, 7, 11, 13, 17], do: true
+  defp prime?(x) do
     Enum.all?((2..round(:math.sqrt(x))), fn(n) -> rem(x, n) != 0 end)
   end
 
-  def factors(n) do
+  defp factors(n) do
     1..round(:math.sqrt(n))
     |> Enum.filter(fn(x) -> rem(n, x) == 0 end)
   end
