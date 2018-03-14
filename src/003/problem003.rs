@@ -22,7 +22,7 @@ fn get_factors(n: i64) -> Vec<i64> {
             factors.push(n / x);
         }
     }
-    return factors;
+    factors
 }
 
 fn get_prime_factors(n: i64) -> Vec<i64> {

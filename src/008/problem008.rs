@@ -21,18 +21,19 @@ const INPUT: &'static str = r"
 71636269561882670428252483600823257530420752963450
 ";
 
+fn solve() -> i64 {
+    INPUT
+        .chars()
+        .filter_map(|char| char.to_digit(10))
+        .map(|number| number as i64)
+        .collect::<Vec<i64>>()
+        .windows(13)
+        .map(|window| window.iter().fold(1, |a, b| a * b))
+        .max()
+        .unwrap()
+}
+
 fn main() {
-    let largest: i64 = INPUT
-                        .chars()
-                        .filter_map(|char| char.to_digit(10))
-                        .map(|number| number as i64)
-                        .collect::<Vec<i64>>()
-                        .windows(13)
-                        .map(|window| window.iter().fold(1, |a, b| a * b))
-                        .max()
-                        .unwrap();
-  
-    // Product of the thirteen adjacent 
-    // digits that have the greatest product.
-    println!("{:?}", largest);
+    let result = solve();
+    println!("{}", result);
 }

@@ -1,4 +1,4 @@
-fn main() {
+fn solve() -> i64 {
     let mut a = 1;
     let mut b = 2;
     let mut sum = 0;
@@ -11,5 +11,10 @@ fn main() {
         b = a + b;
         a = temp;
     }
-    println!("{:?}", sum);
+    sum
+}
+
+fn main() {
+    let result = solve();
+    println!("{}", result);
 }

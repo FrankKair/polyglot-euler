@@ -2,7 +2,7 @@ fn is_pythagorean_triplet(a: i64, b: i64, c: i64) -> bool {
     a * a + b * b == c * c
 }
 
-fn main() {
+fn solve() -> i64 {
     let mut product = 0;
 
     for a in 0..500 {
@@ -15,5 +15,10 @@ fn main() {
             }
         }
     }
-    println!("{}", product);
+    product
+}
+
+fn main() {
+    let result = solve();
+    println!("{}", result);
 }
