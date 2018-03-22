@@ -1,4 +1,4 @@
-fn solve() -> i64 {
+fn solve() -> i32 {
     let mut a = 1;
     let mut b = 2;
     let mut sum = 0;

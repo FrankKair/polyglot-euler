@@ -1,8 +1,8 @@
-fn is_pythagorean_triplet(a: i64, b: i64, c: i64) -> bool {
+fn is_pythagorean_triplet(a: i32, b: i32, c: i32) -> bool {
     a * a + b * b == c * c
 }
 
-fn solve() -> i64 {
+fn solve() -> i32 {
     let mut product = 0;
 
     for a in 0..500 {

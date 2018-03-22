@@ -1,4 +1,4 @@
-fn is_palindrome(n: i64) -> bool {
+fn is_palindrome(n: i32) -> bool {
     let reversed: String = n.to_string().chars().rev().collect();
     reversed == n.to_string()
 }
