@@ -11,3 +11,8 @@
 - Rust
 - Swift
 
+### Adding new problems
+
+Run `ruby scripts/add_new_problem.rb`.
+
+For more info, click [here](https://github.com/FrankKair/polyglot-euler/tree/master/scripts).
