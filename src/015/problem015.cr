@@ -1,4 +1,4 @@
-require "big_int"
+require "big"
 
 struct BigInt
   def factorial
