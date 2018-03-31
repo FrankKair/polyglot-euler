@@ -9,6 +9,6 @@ def lcm(a, b):
 
 x = lcm(1, 2)
 for i in range(3, 21):
-	x = lcm(x, i)
+    x = lcm(x, i)
 
 print(x)
