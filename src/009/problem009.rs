@@ -6,7 +6,7 @@ fn solve() -> i32 {
     let mut product = 0;
 
     for a in 0..500 {
-        for b in 0..500 {
+        for b in a..500 {
             let c = 1000 - a - b;
             let sum = a + b + c;
             if is_pythagorean_triplet(a, b, c) && sum == 1000 {

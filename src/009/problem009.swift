@@ -10,7 +10,7 @@ func isPythagorean(_ a: Int, _ b: Int, _ c: Int) -> Bool {
 var product = 0
 
 for a in (1...500) {
-    for b in (1...500) {
+    for b in (a...500) {
         let c = 1000 - a - b
         let sum = a + b + c
         if isPythagorean(a, b, c) && sum == 1000 {
