@@ -1,5 +1,3 @@
-#!/usr/bin/env xcrun swift
-
 func greatestCommonDivisor(_ x: Int, _ y: Int) -> Int {
     var x = x
     var y = y
@@ -15,9 +13,9 @@ func leastCommonMultiple(_ x: Int, _ y: Int) -> Int {
     return x * y / greatestCommonDivisor(x, y)
 }
 
-
-let result = (1...20).reduce(1) { sum, x in
-    leastCommonMultiple(sum, x)
+func solve() -> Int {
+    return (1...20).reduce(1) { sum, x in leastCommonMultiple(sum, x) }
 }
 
+let result = solve()
 print(result)

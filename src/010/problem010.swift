@@ -1,4 +1,3 @@
-#!/usr/bin/env xcrun swift
 extension Int {
     var squareRootInt: Int { return Int(Float(self).squareRoot()) }
 }
@@ -14,4 +13,9 @@ func generatePrimesUpTo(_ number: Int) -> [Int] {
     return Array(listOfNumbers)
 }
 
-print(generatePrimesUpTo(2000000).reduce(0, +))
+func solve() -> Int {
+    return generatePrimesUpTo(2000000).reduce(0, +)
+}
+
+let result = solve()
+print(result)
