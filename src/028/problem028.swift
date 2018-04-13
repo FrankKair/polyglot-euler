@@ -22,7 +22,7 @@ func solve() -> Int {
         list.append(contentsOf: diagonalNumbers)
     }
 
-    return list.reduce(0) { $0 + $1 }
+    return list.reduce(0, +)
 }
 
 
