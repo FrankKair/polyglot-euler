@@ -6,6 +6,7 @@
 - Elixir
 - Erlang
 - JavaScript
+- Python
 - ReasonML
 - Ruby
 - Rust
