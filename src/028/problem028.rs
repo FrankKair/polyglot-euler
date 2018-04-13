@@ -33,4 +33,3 @@ fn main() {
     let result = solve();
     println!("{}", result);
 }
-

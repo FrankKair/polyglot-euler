@@ -28,4 +28,3 @@ func solve() -> Int {
 
 let result = solve()
 print(result)
-
