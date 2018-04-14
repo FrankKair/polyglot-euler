@@ -5,6 +5,7 @@
 - Crystal
 - Elixir
 - Erlang
+- Go
 - JavaScript
 - Python
 - ReasonML
