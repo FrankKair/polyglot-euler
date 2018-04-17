@@ -32,8 +32,11 @@ fn get_prime_factors(n: i64) -> Vec<i64> {
         .collect::<Vec<i64>>()
 }
 
+fn solve() -> i64 {
+    get_prime_factors(600851475143).into_iter().max().unwrap()
+}
+
 fn main() {
-    if let Some(maximum_value) = get_prime_factors(600851475143).iter().max() {
-        println!("{}", maximum_value);
-    }
+    let result = solve();
+    println!("{}", result);
 }
