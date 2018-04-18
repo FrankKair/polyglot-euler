@@ -1,10 +1,6 @@
-fn square(n: i32) -> i32 {
-    n * n
-}
-
 fn solve() -> i32 {
-    let sum_of_the_squares: i32 = (0..101).map(square).sum();
-    let square_of_the_sum = square((0..101).sum());
+    let sum_of_the_squares: i32 = (0..101).map(|x| x * x).sum();
+    let square_of_the_sum: i32 = (0..101).sum::<i32>().pow(2);
     square_of_the_sum - sum_of_the_squares
 }
 
