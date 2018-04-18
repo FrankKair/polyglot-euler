@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-g = <<EOM
+g = <<-TEXT
 08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
 81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65
@@ -21,31 +21,31 @@ g = <<EOM
 20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16
 20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48
-EOM
+TEXT
 
 # Transform into matrix
-g = g.split("\n").map{|i| i.split(' ').map{|j| j.to_i}}
+g = g.split("\n").map { |i| i.split(' ').map(&:to_i) }
 
 # Get 4x4 submatrices
 g4 = []
 (0..16).each do |i|
-    (0..16).each do |j|
-        g4.append((i..i+3).map{|k| g[k][j..j+3]})
-    end
+  (0..16).each do |j|
+    g4.append((i..i + 3).map { |k| g[k][j..j + 3] })
+  end
 end
 
 v = []
-for m in g4
-    # Transpose
-    mt = (0..3).map{|i| (0..3).map{|j| m[j][i]}}
-    # Horizontal products
-    v += m.map{|h| h.reduce(:*)}
-    # Vertical products
-    v += mt.map{|v| v.reduce(:*)}
-    # Principal diagonal products
-    v += [(0..3).map{|i| m[i][i]}.reduce(:*)]
-    # Secondary diagonal products
-    v += [(0..3).map{|i| m[i][3-i]}.reduce(:*)]
+g4.each do |m|
+  # Transpose
+  mt = (0..3).map { |i| (0..3).map { |j| m[j][i] } }
+  # Horizontal products
+  v += m.map { |i| i.reduce(:*) }
+  # Vertical products
+  v += mt.map { |i| i.reduce(:*) }
+  # Principal diagonal products
+  v += [(0..3).map { |i| m[i][i] }.reduce(:*)]
+  # Secondary diagonal products
+  v += [(0..3).map { |i| m[i][3 - i] }.reduce(:*)]
 end
 
 puts v.max

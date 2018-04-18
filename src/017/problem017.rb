@@ -1,36 +1,28 @@
 #!/usr/bin/env ruby
 
-def words(n)
-    u = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',\
-        'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', \
-        'eighteen', 'nineteen']
+def words(num)
+  u = %w[one two three four five six seven eight nine ten
+         eleven twelve thirteen fourteen fifteen sixteen seventeen
+         eighteen nineteen]
 
-    d = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
+  d = %w[twenty thirty forty fifty sixty seventy eighty ninety]
 
-    n = n.to_i
+  num = num.to_i
 
-    if n == 0
-        return ''
-    end
+  return '' if num.zero?
 
-    if n <= u.size
-        return u[n - 1]
-    end
+  return u[num - 1] if num <= u.size
 
-    if n < 100
-        word = d[n/10 - 2]
-        if n % 10 != 0
-            word += words(n % 10)
-        end
-        return word
-    end
-
-    suffix = words(n - (n/100)*100)
-    word = u[n/100 - 1] + 'hundred' 
-    if suffix.size > 0
-        word += 'and' + suffix
-    end
+  if num < 100
+    word = d[num / 10 - 2]
+    word += words(num % 10) if num % 10 != 0
     return word
+  end
+
+  suffix = words(num - (num / 100) * 100)
+  word = u[num / 100 - 1] + 'hundred'
+  word += 'and' + suffix unless suffix.empty?
+  word
 end
 
-puts ((1..999).map{|i| words(i)}.reduce(:+) + 'onethousand').size
+puts(((1..999).map { |i| words(i) }.reduce(:+) + 'onethousand').size)
