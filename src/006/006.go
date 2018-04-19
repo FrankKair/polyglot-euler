@@ -3,19 +3,19 @@ package main
 import "fmt"
 
 func solve() int {
-    sumOfTheSquares, sum := 0, 0
+	sumOfTheSquares, sum := 0, 0
 
-    for i := 1; i < 100; i++ {
-        sumOfTheSquares += i * i
-        sum += i
-    }
+	for i := 1; i < 100; i++ {
+		sumOfTheSquares += i * i
+		sum += i
+	}
 
-    squareOfTheSum := sum * sum
+	squareOfTheSum := sum * sum
 
-    return squareOfTheSum - sumOfTheSquares
+	return squareOfTheSum - sumOfTheSquares
 }
 
 func main() {
-    result := solve()
-    fmt.Println(result)
+	result := solve()
+	fmt.Println(result)
 }
