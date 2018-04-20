@@ -3,11 +3,12 @@ package main
 import "fmt"
 
 func solve() int {
-	sum := 0
-	for i := 0; i < 1000; i++ {
-		if i%3 == 0 || i%5 == 0 {
-			sum += i
+	sum := 1
+	for i := 3; i < 1003; i++ {
+		if i%2 == 0 {
+			continue
 		}
+		sum += 4*i*i - (6 * (i - 1))
 	}
 	return sum
 }
