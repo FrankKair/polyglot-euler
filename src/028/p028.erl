@@ -1,4 +1,4 @@
--module(problem028).
+-module(p028).
 -export([solve/0]).
 
 spiral_diagonal_sum(1) -> 1;

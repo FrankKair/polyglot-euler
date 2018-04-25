@@ -2,6 +2,7 @@
 
 [Project Euler](https://projecteuler.net) solutions in different programming languages.
 
+- C++
 - Crystal
 - Elixir
 - Erlang
@@ -12,7 +13,6 @@
 - Ruby
 - Rust
 - Swift
-- C++
 
 ### Adding new problems
 

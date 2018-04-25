@@ -18,6 +18,6 @@ int main() {
         }
     }
 
-    printf("Result is %llu\n", result);
+    printf("%llu\n", result);
     return 0;
 }

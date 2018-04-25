@@ -1,4 +1,4 @@
--module(problem015).
+-module(p015).
 -export([solve/0]).
 
 factorial(0) -> 1;

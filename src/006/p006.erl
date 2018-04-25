@@ -1,4 +1,4 @@
--module(problem006).
+-module(p006).
 -export([solve/0]).
 
 square_of_sums() ->
