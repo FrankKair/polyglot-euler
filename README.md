@@ -12,6 +12,7 @@
 - Ruby
 - Rust
 - Swift
+- C++
 
 ### Adding new problems
 
