@@ -1,11 +1,9 @@
 #!/usr/bin/env elixir
 defmodule Problem025 do
-  defp fibonacci_sequence do
-    Stream.unfold({1, 1}, fn {a, b} -> {a, {b, a + b}} end)
-  end
+  Code.require_file("../../helper_libs/euler.ex")
 
   def solve do
-    fibonacci_sequence()
+    Euler.fibonacci_sequence()
     |> Enum.find_index(&(length(Integer.digits(&1)) == 1000))
     |> Kernel.+(1)
   end
