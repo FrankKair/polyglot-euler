@@ -1,11 +1,12 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 #define LIMIT 1000
 
-int main() {
-    unsigned long long result = 5;
-    for (unsigned long long i = 3; i < LIMIT; i += 6) {
-        unsigned long long j = i;
+int solve() {
+    int result = 5;
+    for (int i = 3; i < LIMIT; i += 6) {
+        int j = i;
         while (j < LIMIT) {
             result += j;
             if (!(j % 5)) {
@@ -18,6 +19,10 @@ int main() {
         }
     }
 
-    printf("%llu\n", result);
-    return 0;
+    return result;
+}
+
+int main() {
+    int result = solve();
+    cout << result << endl;
 }
