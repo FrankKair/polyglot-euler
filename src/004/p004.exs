@@ -25,4 +25,4 @@ defmodule Problem004 do
   end
 end
 
-IO.inspect Problem004.solve
+IO.puts Problem004.solve
