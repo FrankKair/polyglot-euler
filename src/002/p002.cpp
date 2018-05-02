@@ -9,7 +9,7 @@ typedef long double LD;
 typedef unsigned long long ULL;
 
 LD phi = (sqrt(5) + 1) / 2;
-LD phi_inverse = phi - 1;;
+LD phi_inverse = phi - 1;
 
 ULL fib(int i) {
     return (ULL) ((pow(phi, i) - pow(-phi_inverse, i)) / sqrt(5));
