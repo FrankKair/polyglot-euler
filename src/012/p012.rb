@@ -12,6 +12,10 @@ class Integer
   end
 end
 
-x = 1
-x += 1 while x.triangle_number.factors.count < 500
-puts x.triangle_number
+def solve
+  x = 1
+  x += 1 while x.triangle_number.factors.count < 500
+  x.triangle_number
+end
+
+puts solve

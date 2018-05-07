@@ -12,11 +12,15 @@ fn condition(x: u32) -> bool {
     a && b && c
 }
 
-fn main() {
-    let mut x = 1;
-    while !condition(x) {
-        x += 1;
+fn solve() -> i32 {
+    let mut number = 1;
+    while !condition(number) {
+        number += 1;
     }
+    number
+}
 
-    println!("{:?}", x);
+fn main() {
+    let result = solve();
+    println!("{}", result);
 }

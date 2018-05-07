@@ -8,9 +8,12 @@ def condition(x)
   x.digits == (x * 2).digits == (x * 3).digits == (x * 4).digits == (x * 5).digits == (x * 6).digits
 end
 
-x = 1
-while !condition(x)
-  x += 1
+def solve
+  x = 1
+  while !condition(x)
+    x += 1
+  end
+  x
 end
 
-puts x
+puts solve

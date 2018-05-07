@@ -1,3 +1,8 @@
 #!/usr/bin/env ruby
 require 'mathn'
-puts Prime.take(10_001).last
+
+def solve
+  Prime.take(10_001).last
+end
+
+puts solve

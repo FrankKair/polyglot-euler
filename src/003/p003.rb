@@ -17,4 +17,8 @@ class Integer
   end
 end
 
-puts 600_851_475_143.factors.select(&:prime?).max
+def solve
+  600_851_475_143.factors.select(&:prime?).max
+end
+
+puts solve

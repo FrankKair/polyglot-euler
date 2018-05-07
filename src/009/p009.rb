@@ -20,5 +20,4 @@ def solve
   product
 end
 
-result = solve
-puts result
+puts solve

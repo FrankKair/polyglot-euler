@@ -3,7 +3,7 @@ fn is_palindrome(n: i32) -> bool {
     reversed == n.to_string()
 }
 
-fn main() {
+fn solve() -> i32 {
     let mut largest = 0;
     for x in 100..999 {
         for y in 100..999 {
@@ -13,5 +13,10 @@ fn main() {
             }
         }
     }
-    println!("{}", largest);
+    largest
+}
+
+fn main() {
+    let result = solve();
+    println!("{}", result);
 }

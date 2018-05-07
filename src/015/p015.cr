@@ -15,4 +15,8 @@ def count_routes(k)
   combination(2 * k, k)
 end
 
-puts count_routes(20.to_big_i)
+def solve
+  count_routes(20.to_big_i)
+end
+
+puts solve

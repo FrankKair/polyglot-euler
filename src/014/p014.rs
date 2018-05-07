@@ -13,7 +13,7 @@ fn generate_collatz_sequence_starting_at(number: i64) -> Vec<i64> {
     return numbers;
 }
 
-fn main() {
+fn solve() -> i32 {
     let mut longest_chain = Vec::new();
     let mut number = 1;
     let mut highest_number = 1;
@@ -26,5 +26,10 @@ fn main() {
             highest_number = number;
         }
     }
-    println!("{}", highest_number);
+    highest_number
+}
+
+fn main() {
+    let result = solve();
+    println!("{}", result);
 }

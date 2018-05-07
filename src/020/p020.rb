@@ -10,4 +10,8 @@ def sum_factorial_digits(x)
   x.factorial.to_s.chars.map(&:to_i).reduce(:+)
 end
 
-puts sum_factorial_digits(100)
+def solve
+  sum_factorial_digits(100)
+end
+
+puts solve

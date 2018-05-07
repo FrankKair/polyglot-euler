@@ -5,11 +5,15 @@ class Integer
   end
 end
 
-largest = 0
-(100..999).each do |x|
-  (100..999).each do |y|
-    product = x * y
-    largest = product if product > largest && product.palindrome?
+def solve
+  largest = 0
+  (100..999).each do |x|
+    (100..999).each do |y|
+      product = x * y
+      largest = product if product > largest && product.palindrome?
+    end
   end
+  largest
 end
-puts largest
+
+puts solve
