@@ -8,6 +8,7 @@
 - Erlang
 - Go
 - JavaScript
+- Lua
 - Python
 - ReasonML
 - Ruby
