@@ -13,6 +13,7 @@
 - ReasonML
 - Ruby
 - Rust
+- Scala
 - Swift
 
 ### Adding new problems
