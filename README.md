@@ -7,6 +7,7 @@
 - Elixir
 - Erlang
 - Go
+- Java
 - JavaScript
 - Lua
 - Python
