@@ -1,7 +1,7 @@
 #!/usr/bin/env elixir
 defmodule Problem004 do
   defp reverse_number(x) do
-  	x
+    x
     |> Integer.to_string()
     |> String.reverse()
     |> String.to_integer()
