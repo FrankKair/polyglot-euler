@@ -1,20 +1,26 @@
-extension Int {
-    var squareRootInt: Int { return Int(Float(self).squareRoot()) }
-}
+func sieveOfEratosthenes(_ bound: Int) -> [Int] {
+    var primes = (0...bound).map { $0 == 2 || $0 & 1 != 0 }
 
-func generatePrimesUpTo(_ number: Int) -> [Int] {
-    var listOfNumbers = Set(2...number)
-    for x in (2...number.squareRootInt) {
-        let numbersToRemove = listOfNumbers.filter { $0 % x == 0 && $0 != x }
-        if !numbersToRemove.isEmpty {
-          listOfNumbers.subtract(numbersToRemove)
+    var num = 3
+    while num * num <= bound {
+        var j = num * num
+
+        while j <= bound {
+            primes[j] = false
+            j += num
         }
+        num += 2
     }
-    return Array(listOfNumbers)
+
+    return primes.enumerated().flatMap { (index: Int, value: Bool) -> Int? in
+        if index == 1 { return nil }
+        guard value == true else { return nil }
+        return index
+    }
 }
 
 func solve() -> Int {
-    return generatePrimesUpTo(2000000).reduce(0, +)
+    return sieveOfEratosthenes(2000000).reduce(0, +)
 }
 
 let result = solve()

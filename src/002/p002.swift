@@ -12,7 +12,7 @@ func solve() -> Int {
         a = temp
     }
 
-  return sum
+    return sum
 }
 
 let result = solve()
