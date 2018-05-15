@@ -5,6 +5,7 @@
 - C++
 - Clojure
 - Crystal
+- D
 - Elixir
 - Erlang
 - Go
