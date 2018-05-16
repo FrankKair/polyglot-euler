@@ -1,4 +1,7 @@
-; works in both clojure and clojurescript! 
+; works in both clojure and clojurescript!
+; you can run it with either lumo ($ lumo p002.cljc) (much faster startup due to node)
+; or via boot ($ boot -f p002.cljc) (slow startup, but faster if you run it from repl)
+; to run from lein you may need to rename it to p002.clj
 
 (defn fib-iterator 
   "Function that given a vector of 2 numbers, returns the next 'fibonacci' step: [0 1] => [1 1], [1 1] => [1 2]."
@@ -35,4 +38,6 @@
     0 ; initial value, the identity of our operation +
     fib)) ; the input
 
-(println (result fib-lazy))
+(defn solve [] (result fib-lazy))
+
+(prn (solve))
