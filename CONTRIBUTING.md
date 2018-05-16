@@ -3,6 +3,21 @@
 When submitting pull requests in a particular programming language, this document is a reference.
 This pattern / framework was adopted to facilitate comparisons between solutions.
 
+### C
+
+```c
+#include <stdio.h>
+
+int solve() {
+    // Body
+}
+
+int main() {
+    printf('%d\n', solve());
+    return(0);
+}
+```
+
 ### C++
 
 ```cpp
