@@ -3,11 +3,11 @@
 
 using namespace std;
 
-bool isInteger(double d) {
+bool is_integer(double d) {
     return floor(d) == d;
 }
 
-bool isPrime(long n) {
+bool is_prime(long n) {
     if (n == 2) {
         return true;
     }
@@ -16,7 +16,7 @@ bool isPrime(long n) {
     }
     for(long double i = 3; i <= sqrt(n); i += 2) {
         double result = (double) n / (double) i;
-        if (isInteger(result)) {
+        if (is_integer(result)) {
             return false;
         }
     }
@@ -27,9 +27,9 @@ long solve(double value) {
     double rest = value;
     double result = value;
     for (long i = 2; i <= sqrt(value); i++) {
-        if (isPrime(i)) {
+        if (is_prime(i)) {
             double tmp = rest / i;
-            while (isInteger(tmp) && floor(tmp) >= 1) {
+            while (is_integer(tmp) && floor(tmp) >= 1) {
                 rest = tmp;
                 tmp = rest / i;
                 result = i;
