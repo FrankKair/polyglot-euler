@@ -21,8 +21,10 @@
 - Scala
 - Swift
 
-### Adding new problems
+### Contributing and adding new problems
 
-Run `ruby scripts/add_new_problem.rb`.
+Check our [CONTRIBUTING.md](https://github.com/FrankKair/polyglot-euler/blob/master/CONTRIBUTING.md) for guidelines.
 
+Run `ruby scripts/add_new_problem.rb` to add a new problem to the project.
 For more info, click [here](https://github.com/FrankKair/polyglot-euler/tree/master/scripts).
+
