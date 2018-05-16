@@ -26,7 +26,13 @@ int main() {
 ### Clojure
 
 ```clojure
-; TODO
+(defn function1 [x]
+  ; function body
+)
+
+(defn solve [] (function1 a))
+
+(prn (solve))
 ```
 
 ### Crystal
@@ -117,8 +123,16 @@ func main() {
 ### Haskell
 
 ```haskell
--- TODO
+function1 :: a -> b
+function1 x = -- Body
+
+function2 :: b -> c
+function2 y = -- Body
+
+main :: IO
+main = print $ -- Call other functions
 ```
+Note: type signatures are mandatory to all top-level functions.
 
 ### Java
 
