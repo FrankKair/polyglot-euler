@@ -226,7 +226,12 @@ puts solve
 ### Scala
 
 ```scala
-// TODO
+object Main {
+  def main(args: Array[String]): Unit = {
+    /* Body */
+  }
+}
+
 ```
 
 ### Swift
