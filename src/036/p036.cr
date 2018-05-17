@@ -1,5 +1,5 @@
 class String
-  def palindrome? : Bool
+  def palindrome?
     self == reverse
   end
 end
@@ -8,15 +8,14 @@ struct Int
   def number_palindrome(base)
     case base
     when 2
-      self.to_s(2).palindrome?
+      to_s(2).palindrome?
     when 10
-      self.to_s.palindrome?
+      to_s.palindrome?
     end
-    false
   end
 
   def double_base_palindrome
-    self.number_palindrome(10) && self.number_palindrome(2)
+    number_palindrome(10) && number_palindrome(2)
   end
 end
 
