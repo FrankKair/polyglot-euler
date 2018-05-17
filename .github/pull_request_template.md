@@ -1,3 +1,6 @@
+Hello! Thank you for your contribution to `polyglot-euler`.
+- [ ] I checked [CONTRIBUTING.md](https://github.com/FrankKair/polyglot-euler/blob/master/CONTRIBUTING.md) for my programming language of choice.
+
 ### How the solution works
 
 Explain the reasoning behind your solution here.
@@ -11,7 +14,6 @@ Real time:
 User time:
 Sys. time:
 CPU share:
-Exit code:
 ```
 
 (You can alternatively `$ time` your program).
