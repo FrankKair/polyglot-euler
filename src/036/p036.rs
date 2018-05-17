@@ -1,19 +1,21 @@
-fn is_palindrome(n: i32) -> bool {
-    let reversed: String = n.to_string().chars().rev().collect();
+fn palindrome(n: String) -> bool {
+    let reversed = n.chars().rev().collect::<String>();
     reversed == n.to_string()
 }
 
-fn is_binary_palindrome(n: i32) -> bool {
-    let binary = format!("{:b}", n);
-    let reversed: String = format!("{:b}", n).chars().rev().collect();
-    reversed == binary
+fn number_palindrome(n: i32, base: i8) -> bool {
+    match base {
+        2 => palindrome(format!("{:b}", n)),
+        10 => palindrome(n.to_string()),
+        _ => false,
+    }
 }
 
 fn double_base_palindrome(n: i32) -> bool {
-    is_palindrome(n) && is_binary_palindrome(n)
+    number_palindrome(n, 10) && number_palindrome(n, 2)
 }
 
-fn sum_of_double_palindrome_numbers_below(limit: i32) -> i32 {
+fn sum_double_base_palindromes_below(limit: i32) -> i32 {
     (0..limit)
         .into_iter()
         .filter(|&x| double_base_palindrome(x))
@@ -21,7 +23,7 @@ fn sum_of_double_palindrome_numbers_below(limit: i32) -> i32 {
 }
 
 fn solve() -> i32 {
-    sum_of_double_palindrome_numbers_below(1000000)
+    sum_double_base_palindromes_below(1000000)
 }
 
 fn main() {
