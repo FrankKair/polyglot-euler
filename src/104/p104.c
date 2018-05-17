@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 
+long pow_list[10];
+
 long fib_first(long n) {
     /*
      * Get first 9 digits of a Fibonacci number, given its index.
@@ -26,11 +28,11 @@ int pandigital(long n) {
     // We need each digit of a 9 digit number isolated
     int j, v = 0;
     for (j = 1; j <= 9; j++) {
-        int d = (int)((n % (long)pow(10, j))/pow(10, j - 1)); // gets digit d[j]
+        int d = (int)((n % pow_list[j])/pow_list[j - 1]); // gets digit d[j]
         v |= (1 << d);
-        n -= d * (long)pow(10, j - 1);
+        n -= d * pow_list[j - 1];
     }
-    return (int)(v == 1022);
+    return (v == 1022);
 }
 
 int main() {
@@ -42,6 +44,10 @@ int main() {
      * to use only needed resources.
      */
     long i = 1, a = 1, b = 1, aux;
+
+    for (i = 0; i <= 9; i++) {
+        pow_list[i] = pow(10, i);
+    }
 
     for (i = 3; i < 1000000; i++) { // A big number of terms
         aux = a;
