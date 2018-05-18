@@ -1,5 +1,5 @@
 fn is_palindrome(n: i32) -> bool {
-    let reversed: String = n.to_string().chars().rev().collect();
+    let reversed = n.to_string().chars().rev().collect::<String>();
     reversed == n.to_string()
 }
 
