@@ -1,4 +1,4 @@
-public class p028 {
+public final class p028 {
     private static int solve() {
         int sum = 1;
         for (int i = 3; i < 1003; i += 2) {

@@ -1,4 +1,4 @@
-public class p001 {
+public final class p001 {
     private static int solve() {
         int sum = 0;
         for (int i = 0; i < 1000; i++) {

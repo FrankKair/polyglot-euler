@@ -152,7 +152,7 @@ Note: type signatures are mandatory to all top-level functions.
 ### Java
 
 ```java
-public class p028 {
+public final class p001 {
     private static int function(int x) {
         // Body
     }

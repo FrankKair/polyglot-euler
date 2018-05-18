@@ -1,4 +1,4 @@
-public class p015 {
+public final class p015 {
     private static long combination(long n, long k) {
         long c = 1;
         for (long i = 0; i < k; i++) {
