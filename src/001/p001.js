@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 function solve() {
-  let sum = 0
-  for (let i = 1; i < 1000; i++) {
-    if (i % 3 === 0 || i % 5 === 0) {
-      sum += i
-    }
-  }
-  return sum
+  return Array(999)
+    .fill(0)
+    .map((value, index) => index + 1)
+    .filter(value => value % 3 === 0 || value % 5 === 0)
+    .reduce((sum, value) => sum + value);
 }
 
-const result = solve()
-console.log(result)
+const result = solve();
+console.log(result);
