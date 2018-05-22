@@ -20,7 +20,7 @@ struct Int
 end
 
 def sum_double_base_palindromes_below(limit)
-  (1..limit).select { |x| x.double_base_palindrome }.sum
+  (1..limit).select(&.double_base_palindrome).sum
 end
 
 def solve
