@@ -4,8 +4,8 @@ function solve() {
     .fill(0)
     .map((value, index) => index + 1)
     .filter(value => value % 3 === 0 || value % 5 === 0)
-    .reduce((sum, value) => sum + value);
+    .reduce((sum, value) => sum + value)
 }
 
-const result = solve();
-console.log(result);
+const result = solve()
+console.log(result)
