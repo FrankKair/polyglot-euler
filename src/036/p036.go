@@ -14,7 +14,7 @@ func palindrome(input string) bool {
 	return true
 }
 
-func numberPalindrome(input int, base int) bool {
+func numberPalindrome(input, base int) bool {
 	input64 := int64(input)
 	number := strconv.FormatInt(input64, base)
 	return palindrome(number)
