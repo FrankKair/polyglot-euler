@@ -1,9 +1,7 @@
 #!/usr/bin/env elixir
 defmodule Problem034 do
-  defp factorial(0), do: 1
   defp factorial(1), do: 1
   defp factorial(x) when is_integer(x) and x > 0, do: x*factorial(x-1)
-  #defp factorial(x), do: 1..x |> Enum.reduce(&Kernel.*/2)
 
   defp is_factorial_sum?(number) do
     number ==
