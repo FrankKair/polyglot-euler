@@ -13,21 +13,11 @@ defmodule Problem019 do
     end
   end
 
-  @doc """
-  Propagates the week index given monthly number of days.
-  Last calculated value is for the next year, so we don't return it
-  """
   def calculate_month_first_days([[], [_|month_tail]]), do: month_tail
   def calculate_month_first_days([[delta_head|delta_tail], [month_head|month_tail]]) do
     calculate_month_first_days([delta_tail, [rem(delta_head+month_head, 7) | [month_head|month_tail]]])
   end
 
-  @doc """
-  At first we generate a stream of lists on the form [year, weekday], where year is the year number and
-  weekday is the weekday index (0 = sunday, 1 = monday, ..., 6 = saturday) for the 1st of January of that year.
-  We then transform each of that lists into a list of weekday indexes for each month.
-  We can then only count the zeros, meaning a leading sunday on the month.
-  """
   def solve do
     # [1901, 2] means that 1901-01-01 was a tuesday
     Stream.unfold([1901, 2], fn [year, weekday] -> {[year, weekday],
