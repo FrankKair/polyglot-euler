@@ -8,9 +8,7 @@ defmodule Problem029 do
 
   def solve do
     generate_powers()
-    |> Enum.to_list()
-    |> Enum.sort()
-    |> Enum.dedup()
+    |> Enum.uniq()
     |> Enum.count()
   end
 end
