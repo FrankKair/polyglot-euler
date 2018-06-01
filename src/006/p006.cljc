@@ -3,8 +3,7 @@
 (defn solve []
   (let [numbers (range 1 101)
         square #(* % %)
-        sum-squares (transduce (map square) + 0 numbers)
-        square-sum (square (reduce + 0 numbers))]
-      (- square-sum sum-squares)))
+        [sum-of-squares sum] (transduce (map (juxt square identity)) (partial mapv +) [0 0] numbers)]
+        (- (square sum) sum-of-squares)))
 
 (prn (solve))
