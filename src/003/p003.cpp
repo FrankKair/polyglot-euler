@@ -14,7 +14,7 @@ bool is_prime(long n) {
     if (!n || n == 1 || n % 2 == 0) {
         return false;
     }
-    for(long double i = 3; i <= sqrt(n); i += 2) {
+    for (long double i = 3; i <= sqrt(n); i += 2) {
         double result = (double) n / (double) i;
         if (is_integer(result)) {
             return false;
@@ -23,7 +23,8 @@ bool is_prime(long n) {
     return true;
 }
 
-long solve(double value) {
+long solve() {
+    double value = 600851475143;
     double rest = value;
     double result = value;
     for (long i = 2; i <= sqrt(value); i++) {
@@ -42,8 +43,7 @@ long solve(double value) {
     return result;
 }
 
-int main(int argc, char** argv) {
-    double value = 600851475143;
-    long result = solve(value);
+int main() {
+    long result = solve();
     cout << result << endl;
 }

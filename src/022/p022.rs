@@ -12,7 +12,7 @@ fn solve() -> i32 {
     names.sort();
 
     names
-        .iter()
+        .into_iter()
         .enumerate()
         .map(|(i, name)| {
             let bytes: i32 = name.bytes().map(|c| (c as i32) - 64).sum();
