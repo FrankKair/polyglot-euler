@@ -15,6 +15,7 @@
 - JavaScript
 - Lua
 - Python
+- Perl
 - ReasonML
 - Ruby
 - Rust
