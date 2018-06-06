@@ -200,6 +200,24 @@ local result = solve()
 print(result)
 ```
 
+### Perl
+
+```perl
+#!/usr/bin/env perl
+use strict;
+
+sub function(x) {
+    # Body
+}
+
+sub solve {
+    # Call other functions
+}
+
+my $result = solve;
+print($result);
+```
+
 ### Python
 
 ```python
