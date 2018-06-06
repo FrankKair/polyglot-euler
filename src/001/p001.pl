@@ -13,4 +13,3 @@ sub solve {
 
 my $result = solve;
 print($result);
-
