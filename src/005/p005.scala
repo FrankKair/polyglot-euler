@@ -1,14 +1,19 @@
 object Main {
   def gcd(a: Int, b: Int): Int = {
     if (b == 0) return a.abs
-    return gcd(b, a%b);
+    gcd(b, a % b)
   }
 
   def lcm(a: Int, b: Int): Int = {
-    (a * b).abs/gcd(a, b);
+    (a * b).abs / gcd(a, b)
+  }
+
+  def solve(): Int = {
+    (1 to 19).reduce((acc, x) => lcm(acc, x))
   }
 
   def main(args: Array[String]): Unit = {
-    println((1 to 19).reduceLeft((acc, x) => lcm(acc, x)));
+    val result = solve()
+    println(result)
   }
 }

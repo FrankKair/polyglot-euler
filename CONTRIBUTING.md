@@ -274,8 +274,17 @@ puts solve
 
 ```scala
 object Main {
+  def function(x: Int): Int = {
+    // Body
+  }
+
+  def solve(): Int = {
+    // Call other functions
+  }
+
   def main(args: Array[String]): Unit = {
-    /* Body */
+    val result = solve()
+    println(result)
   }
 }
 

@@ -1,16 +1,21 @@
 object Main {
-  def is_palindrome(num: Int): Boolean = {
+  def isPalindrome(num: Int): Boolean = {
     num.toString == num.toString.reverse
   }
 
-  def main(args: Array[String]): Unit = {
+  def solve(): Int = {
     val maximum = (
       for {
         x <- (100 to 999)
         y <- (100 to 999)
       } yield(x * y)
-    ).filter((num) => is_palindrome(num)).max
+    ).filter((num) => isPalindrome(num)).max
 
-    println(maximum)
+    maximum
+  }
+
+  def main(args: Array[String]): Unit = {
+    val result = solve()
+    println(result)
   }
 }
