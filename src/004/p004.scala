@@ -9,7 +9,7 @@ object Main {
         x <- (100 to 999)
         y <- (100 to 999)
       } yield(x * y)
-    ).filter((num) => isPalindrome(num)).max
+    ).filter(num => isPalindrome(num)).max
 
     maximum
   }
