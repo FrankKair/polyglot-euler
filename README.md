@@ -9,6 +9,7 @@
 - D
 - Elixir
 - Erlang
+- Futhark
 - Go
 - Haskell
 - Java
