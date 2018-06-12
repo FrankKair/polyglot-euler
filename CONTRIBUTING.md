@@ -112,6 +112,16 @@ solve() ->
   % Call other functions
 ```
 
+### Futhark
+
+```futhark
+let function(n: i32): i32 = -- Body
+
+let solve(): i32 = -- Call other functions
+
+let main(): i32 = solve()
+```
+
 ### Go
 
 Run `go fmt` before commit.
