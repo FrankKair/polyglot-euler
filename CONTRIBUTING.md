@@ -194,6 +194,22 @@ const result = solve()
 console.log(result)
 ```
 
+### Julia
+
+```julia
+function func(x)
+    # Body
+end
+
+function solve()
+    # Body
+end
+
+result = solve()
+
+println(result)
+```
+
 ### Lua
 
 ```lua

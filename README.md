@@ -14,6 +14,7 @@
 - Haskell
 - Java
 - JavaScript
+- Julia
 - Lua
 - Python
 - Perl
