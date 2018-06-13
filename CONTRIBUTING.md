@@ -187,11 +187,17 @@ console.log(result)
 ### Julia
 
 ```julia
-# Aditional functions
+function func(x)
+    # Body
+end
 
-solve() = # Body
+function solve()
+    # Body
+end
 
-println(solve())
+result = solve()
+
+println(result)
 ```
 
 ### Lua

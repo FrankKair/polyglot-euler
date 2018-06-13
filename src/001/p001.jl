@@ -1,5 +1,11 @@
-isdivisible(n) = (0 == (n % 3)) || (0 == (n % 5))
+function isdivisible(n)
+   (0 == (n % 3)) || (0 == (n % 5))
+end
 
-solve() = sum(filter(isdivisible, 1:999))
+function solve()
+   sum(filter(isdivisible, 1:999))
+end
 
-println(solve())
+result = solve()
+
+println(result)
