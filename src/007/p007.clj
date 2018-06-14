@@ -1,5 +1,3 @@
-; works in both clojure and clojurescript
-
 (defn next-primes [[primes new]] 
   (let [new* (inc (inc new))] 
       (if (some #(= 0 (rem new %)) primes)

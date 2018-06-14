@@ -1,5 +1,3 @@
-; works in both clojure and clojurescript
-
 (defn solve []
   (let [palindrome? #(let [sn (str %)] (= sn (apply str (reverse sn))))
         products (for [x (range 999 99 -1) y (range 999 99 -1)] (* x y))]

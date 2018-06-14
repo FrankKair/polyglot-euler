@@ -1,5 +1,3 @@
-; works in both clojure and clojurescript
-
 (defn solve [] 
   (let [fib-iterator (fn [[fj fk]] [fk (+ fj fk)])
         fib-lazy (iterate fib-iterator [1 1])

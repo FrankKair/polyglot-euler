@@ -7,5 +7,4 @@ function solve()
 end
 
 result = solve()
-
 println(result)
