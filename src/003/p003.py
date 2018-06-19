@@ -4,9 +4,10 @@ def prime(n):
     if n % 2 == 0 or n < 2: return False
     for i in range(3, int(n**0.5) + 1, 2):
         if n % i == 0:
-            return False    
+            return False
 
     return True
+
 
 def factors(n):
     f, s = 2, set()
@@ -17,5 +18,6 @@ def factors(n):
         else:
             f += 1
     return s
+
 
 print(max([n for n in factors(600851475143) if prime(n)]))

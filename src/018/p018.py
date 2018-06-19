@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 
+
 class Node(object):
     def __init__(self, value):
         self.value = int(value)
         self.left = None
         self.right = None
+
 
 tree = '''75
 95 64
@@ -24,6 +26,7 @@ tree = '''75
 
 tree = [list(map(int, lvl.split(' '))) for lvl in tree.split('\n')]
 
+
 def path(tree, i, j):
     if i == len(tree):
         return 0
@@ -32,5 +35,6 @@ def path(tree, i, j):
     r = path(tree, i + 1, j + 1)
 
     return max(max(l, r) + tree[i][j], tree[i][j])
+
 
 print(path(tree, 0, 0))

@@ -31,7 +31,8 @@ g = [i.split(' ') for i in g.split('\n')]
 g4 = []
 for i in range(17):
     for j in range(17):
-        g4.append([[int(g[a][b]) for a in range(i, i+4)] for b in range(j, j+4)])
+        g4.append([[int(g[a][b]) for a in range(i, i + 4)]
+                   for b in range(j, j + 4)])
 
 v = []
 for m in g4:
@@ -44,6 +45,6 @@ for m in g4:
     # Principal diagonal products
     v += [prod([m[i][i] for i in range(4)])]
     # Secondary diagonal products
-    v += [prod([m[i][3-i] for i in range(4)])]
+    v += [prod([m[i][3 - i] for i in range(4)])]
 
 print(max(v))
