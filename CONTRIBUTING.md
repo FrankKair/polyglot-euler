@@ -330,3 +330,19 @@ func solve() -> Int {
 let result = solve()
 print(result)
 ```
+
+### TypeScript
+
+```typescript
+function func(x) {
+  // Body
+}
+
+function solve(): number {
+  // Call other functions
+}
+
+const result = solve()
+console.log(result)
+```
+

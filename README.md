@@ -23,6 +23,7 @@
 - Rust
 - Scala
 - Swift
+- TypeScript
 
 ### Contributing and adding new problems
 
