@@ -22,6 +22,7 @@
 - Ruby
 - Rust
 - Scala
+- Scheme
 - Swift
 - TypeScript
 
