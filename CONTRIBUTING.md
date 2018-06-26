@@ -316,6 +316,17 @@ object Main {
 
 ```
 
+### Sheme
+```scheme
+(define func)
+
+(define solve
+  ; Use other functions
+)
+
+(display solve)
+```
+
 ### Swift
 
 ```swift
