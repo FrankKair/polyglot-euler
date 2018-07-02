@@ -1,4 +1,3 @@
-#!/usr/bin/env lua
 function solve()
   local n = 600851475143
   local limit = n / 2

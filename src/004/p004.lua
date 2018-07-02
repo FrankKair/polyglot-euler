@@ -1,4 +1,3 @@
-#!/usr/bin/env lua
 function is_palindrome(n)
   local str = tostring(n)
   return str == string.reverse(str)

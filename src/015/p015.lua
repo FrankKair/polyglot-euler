@@ -1,4 +1,3 @@
-#!/usr/bin/env lua
 function combination(n, k)
   local c = 1
   for i=0, k-1 do

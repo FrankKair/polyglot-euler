@@ -1,4 +1,3 @@
-#!/usr/bin/env lua
 function solve()
   local product = 1
   for a=0, 500 do

@@ -1,4 +1,3 @@
-#!/usr/bin/env lua
 function sum_even_fibs_below(limit)
   local sum = 0
   local a = 1

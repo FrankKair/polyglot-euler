@@ -1,4 +1,3 @@
-#!/usr/bin/env lua
 function solve()
   local sum = 1
   for i=3, 1001, 2 do

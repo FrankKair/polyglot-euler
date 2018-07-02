@@ -1,4 +1,3 @@
-#!/usr/bin/env lua
 function gcd(a, b)
   while b > 0 do
     local mod = a % b

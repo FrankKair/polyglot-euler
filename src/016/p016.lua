@@ -1,4 +1,3 @@
-#!/usr/bin/env lua
 function solve()
   local str = string.format("%.0f", 2 ^ 1000)
   local sum = 0
