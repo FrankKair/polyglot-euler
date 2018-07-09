@@ -3,6 +3,14 @@
 When submitting pull requests in a particular programming language, this document is a reference.
 This pattern / framework was adopted to facilitate comparisons between solutions.
 
+### Pull Request / Files
+
+Pull requests should be named with the language and Euler problem, like: "C++ 036", "Rust 006".
+
+You should add the programming language tag as well.
+
+Files should be named following the pattern p001.cpp, p035.rs, p110.swift, etc.
+
 ### C
 
 ```c
