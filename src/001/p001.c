@@ -1,12 +1,16 @@
 #include <stdio.h>
 
-int main() {
+int solve() {
     int i, n = 0;
     for (i = 1; i < 1000; i++) {
         if (i % 3 == 0 || i % 5 == 0) {
             n += i;
         }
     }
-    printf("%d\n", n);
-    return(0);
+    return n;
+}
+
+int main() {
+    int result = solve();
+    printf("%d\n", result);
 }
