@@ -19,6 +19,7 @@
 - Python
 - Perl
 - ReasonML
+- Red
 - Ruby
 - Rust
 - Scala
