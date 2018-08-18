@@ -9,7 +9,6 @@ import (
 
 func loadNames() []string {
 	file, err := ioutil.ReadFile("p022_names.txt")
-
 	if err != nil {
 		fmt.Println("Error reading file.")
 	}
@@ -22,17 +21,16 @@ func loadNames() []string {
 
 func solve() int {
 	names := loadNames()
-	numberOfNames := len(names)
-
 	sum := 0
+
 	// Iterate over names
-	for i := 0; i < numberOfNames; i++ {
+	for i := range names {
 		nameScore := 0
-		nameSize := len(names[i])
+		name := names[i]
 
 		// Chars of name
-		for j := 0; j < nameSize; j++ {
-			nameScore += int(names[i][j]) - 64
+		for j := range name {
+			nameScore += int(name[j]) - 64
 		}
 
 		sum += nameScore * (i + 1)
