@@ -157,6 +157,22 @@ func main() {
 }
 ```
 
+### Groovy
+
+```groovy
+def function = {
+  // Body
+}
+
+def solve = {
+  // Call other functions
+}
+
+def result = solve()
+println(result)
+```
+
+
 ### Haskell
 
 ```haskell

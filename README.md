@@ -11,6 +11,7 @@
 - Erlang
 - Futhark
 - Go
+- Groovy
 - Haskell
 - Java
 - JavaScript
