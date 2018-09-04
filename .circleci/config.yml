@@ -17,7 +17,7 @@ defaults: &defaults
     - image: circleci/ruby
 
 jobs:
-  default:
+  build:
     <<: *defaults
     steps:
       - checkout
