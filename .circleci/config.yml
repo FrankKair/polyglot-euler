@@ -11,7 +11,7 @@ aliases:
     run:
       name: Run github-linguist on repository
       command: |
-        github-linguist
+        linguist
 
 defaults: &defaults
   docker:
