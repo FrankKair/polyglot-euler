@@ -1,0 +1,24 @@
+aliases:
+  - &install-linguist
+    run:
+      name: Install github-linguist
+      command: |
+        gem install github-linguist
+  - &run-linguist
+    run:
+      name: Run github-linguist on repository
+      command: |
+        github-linguist
+
+defaults: &defaults
+  docker:
+    - image: circleci/ruby
+
+version: 2
+jobs:
+  default:
+    <<: *defaults
+    steps:
+      - checkout
+      - <<: *install-linguist
+      - <<: *run-linguist
