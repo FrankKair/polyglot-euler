@@ -5,6 +5,7 @@ aliases:
     run:
       name: Install github-linguist
       command: |
+        sudo apt-get install cmake
         gem install github-linguist
   - &run-linguist
     run:
