@@ -1,5 +1,7 @@
 # Polyglot Euler
 
+[![CircleCI](https://circleci.com/gh/fredericojordan/polyglot-euler.svg?style=svg)](https://circleci.com/gh/fredericojordan/polyglot-euler)
+
 [Project Euler](https://projecteuler.net) solutions in different programming languages.
 
 - Bash
