@@ -1,0 +1,26 @@
+version: 2
+
+aliases:
+  - &install-linguist
+    run:
+      name: Install github-linguist
+      command: |
+        sudo apt-get install cmake
+        gem install github-linguist
+  - &run-linguist
+    run:
+      name: Run github-linguist on repository
+      command: |
+        linguist
+
+defaults: &defaults
+  docker:
+    - image: circleci/ruby
+
+jobs:
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - <<: *install-linguist
+      - <<: *run-linguist
