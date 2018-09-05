@@ -2,6 +2,7 @@
 
 [Project Euler](https://projecteuler.net) solutions in different programming languages.
 
+- Bash
 - C
 - C++
 - Clojure
