@@ -12,6 +12,11 @@ aliases:
       name: Run github-linguist on repository
       command: |
         linguist
+  - &generate-chart
+    run:
+      name: Run script that generates html chart file
+      command: |
+        ./chart.sh
 
 defaults: &defaults
   docker:
