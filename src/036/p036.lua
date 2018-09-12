@@ -1,3 +1,4 @@
+function palindrome(n)
   local str = tostring(n)
   return str == string.reverse(str)
 end
