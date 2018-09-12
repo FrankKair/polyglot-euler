@@ -29,3 +29,4 @@ jobs:
       - checkout
       - <<: *install-linguist
       - <<: *run-linguist
+      - <<: *generate-chart
