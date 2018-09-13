@@ -19,7 +19,7 @@ aliases:
       command: ./chart.sh
   - &move-chart-file
     run:
-      name: Moving generated chart file to artifacts directoryg
+      name: Moving generated chart file to artifacts directory
       command: mv chart.html /tmp/
   - &store-artifact
     store_artifacts:
