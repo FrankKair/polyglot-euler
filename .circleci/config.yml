@@ -17,27 +17,13 @@ aliases:
     run:
       name: Run script that generates html chart file
       command: ./chart.sh
-  - &install-node
+  - &move-chart-file
     run:
-      name: Install NodeJS
-      command: |
-        curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-        sudo apt-get install -y nodejs
-  - &install-puppeteer
-    run:
-      name: Install Puppeteer
-      command: npm i puppeteer
-  - &html2png
-    run:
-      name: Convert html chart to png
-      command: ./html2png.sh
-  - &move-chart-files
-    run:
-      name: Moving generated files to artifacts directory
-      command: mv chart.html /tmp/ && mv chart.png /tmp/
-  - &store-artifacts
+      name: Moving generated chart file to artifacts directoryg
+      command: mv chart.html /tmp/
+  - &store-artifact
     store_artifacts:
-      path: /tmp/
+      path: /tmp/chart.html
 
 defaults: &defaults
   docker:
@@ -52,8 +38,5 @@ jobs:
       - <<: *install-linguist
       - <<: *run-linguist
       - <<: *generate-html-chart
-      - <<: *install-node
-      - <<: *install-puppeteer
-      - <<: *html2png
-      - <<: *move-chart-files
-      - <<: *store-artifacts
+      - <<: *move-chart-file
+      - <<: *store-artifact
