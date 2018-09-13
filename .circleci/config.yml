@@ -20,7 +20,9 @@ aliases:
   - &install-node
     run:
       name: Install NodeJS
-      command: sudo apt-get install node
+      command: |
+        curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+        sudo apt-get install -y nodejs
   - &install-puppeteer
     run:
       name: Install Puppeteer
