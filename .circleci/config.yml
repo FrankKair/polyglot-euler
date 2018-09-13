@@ -1,22 +1,36 @@
 version: 2
 
 aliases:
+  - &install-cmake
+    run:
+      name: Install CMake
+      command: sudo apt-get install cmake
   - &install-linguist
     run:
       name: Install github-linguist
-      command: |
-        sudo apt-get install cmake
-        gem install github-linguist
+      command: gem install github-linguist
   - &run-linguist
     run:
       name: Run github-linguist on repository
-      command: |
-        linguist
-  - &generate-chart
+      command: linguist
+  - &generate-html-chart
     run:
       name: Run script that generates html chart file
-      command: |
-        ./chart.sh
+      command: ./chart.sh
+  - &install-node
+    run:
+      name: Install NodeJS
+      command: sudo apt-get install node
+  - &install-puppeteer
+    run:
+      name: Install Puppeteer
+      command: npm i puppeteer
+  - &html2png
+    run:
+      name: Convert html chart to png
+      command: ./html2png.sh
+
+
 
 defaults: &defaults
   docker:
@@ -27,6 +41,10 @@ jobs:
     <<: *defaults
     steps:
       - checkout
+      - <<: *install-cmake
       - <<: *install-linguist
       - <<: *run-linguist
-      - <<: *generate-chart
+      - <<: *generate-html-chart
+      - <<: *install-node
+      - <<: *install-puppeteer
+      - <<: *html2png
