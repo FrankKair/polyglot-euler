@@ -31,8 +31,13 @@ aliases:
     run:
       name: Convert html chart to png
       command: ./html2png.sh
-
-
+  - &move-chart-files
+    run:
+      name: Moving generated files to artifacts directory
+      command: mv chart.html /tmp/ && mv chart.png /tmp/
+  - &store-artifacts
+    store_artifacts:
+      path: /tmp/
 
 defaults: &defaults
   docker:
@@ -50,3 +55,5 @@ jobs:
       - <<: *install-node
       - <<: *install-puppeteer
       - <<: *html2png
+      - <<: *move-chart-files
+      - <<: *store-artifacts
