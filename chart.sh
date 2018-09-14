@@ -53,14 +53,3 @@ cat >> $FILENAME << EOF
   </body>
 </html>
 EOF
-
-### open browser
-#case $(uname) in
-#   Darwin)
-#      open -a /Applications/Google\ Chrome.app $FILENAME
-#      ;;
-#
-#   Linux|SunOS)
-#      firefox $FILENAME
-#      ;;
-#esac
