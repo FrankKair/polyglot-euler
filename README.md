@@ -6,6 +6,7 @@
 - C
 - C++
 - Clojure
+- Coconut
 - Crystal
 - D
 - Elixir
