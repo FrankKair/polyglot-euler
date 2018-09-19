@@ -1,3 +1,0 @@
-div = x -> [3, 5] |> map$( (==)$(0)..(%)$(x)) |> reduce$(|)
-
-range(3, 1001) |> filter$(div) |> reduce$(+) |> print
