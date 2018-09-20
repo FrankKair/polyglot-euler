@@ -1,0 +1,4 @@
+@recursive_iterator
+def fib() = (1, 1) :: map((+), fib(), fib()$[1:])
+
+fib() |> takewhile$(x -> x < 4000000) |> filter$( x -> 0 == x % 2) |> reduce$(+) |> print
