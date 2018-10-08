@@ -7,10 +7,10 @@
       (range 2 (inc (Math/floor (Math/sqrt x)))))))
 
 (defn spiral-corners [side]
-  (cond
-    (= side 1) '(1)
-    :else (map #(- (* side side) (* % (dec side)))
-               (range 0 4))))
+  (if (= side 1)
+    '(1)
+    (map #(- (* side side) (* % (dec side)))
+         (range 0 4))))
 
 (defn prime-corners-count [side]
   (->> (spiral-corners side)
@@ -31,7 +31,6 @@
        (drop 1)  ; drop case when side-length = 1
        (drop-while more-than-10%)
        (take 1)
-       (first)
-       (first)))
+       (ffirst)))
 
 (prn (solve))
