@@ -8,8 +8,11 @@ score: function [idx name][
   idx * s
 ]
 
-scores: 0
 
-forall names [scores: scores + score (index? names) (first names)]
+solve: function [][
+  scores: 0
+  forall names [scores: scores + score (index? names) (first names)]
+  scores
+]
 
-print scores
+print solve
