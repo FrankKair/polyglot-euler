@@ -25,13 +25,15 @@ arab-roman: func [arab][
   roman
 ]
 
-economy: 0
+solve: function[][
+  economy: 0
 
-foreach rnum load %p089_roman.txt [
-  rnum: to string! rnum
-  old: length? rnum
-  new: length? arab-roman roman-arab rnum
-  economy: economy + old - new
+  foreach rnum load %p089_roman.txt [
+    rnum: to string! rnum
+    old: length? rnum
+    new: length? arab-roman roman-arab rnum
+    economy: economy + old - new
+  ]
 ]
 
-print economy
+print solve
