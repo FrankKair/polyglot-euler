@@ -28,7 +28,7 @@ cat > $FILENAME << EOF
         data.addRows([
 EOF
 
-linguist | while read percentage language
+github-linguist | while read percentage language
     do echo "          ['$language', ${percentage%?}]," >> $FILENAME
 done
 
