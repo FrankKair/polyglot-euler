@@ -12,11 +12,11 @@ aliases:
   - &run-linguist
     run:
       name: Run github-linguist on repository
-      command: linguist
+      command: github-linguist
   - &generate-html-chart
     run:
       name: Run script that generates html chart file
-      command: ./chart.sh
+      command: ./scripts/chart.sh
   - &move-chart-file
     run:
       name: Moving generated chart file to artifacts directory
