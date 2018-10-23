@@ -14,20 +14,13 @@ function loadNames() {
 
 function solve() {
   const names = loadNames();
-  let sum = 0;
-
-  for (let i = 0; i < names.length; i++) {
+  return names.map((name, index) => {
     let nameScore = 0;
-    const name = names[i];
-
-    for (let j = 0; j < name.length; j++) {
-      nameScore += name.charCodeAt(j) - 64;
+    for (let i = 0; i < name.length; i++) {
+      nameScore += name.charCodeAt(i) - 64;
     }
-
-    sum += nameScore * (i + 1);
-  }
-
-  return sum;
+    return nameScore * (index + 1);
+  }).reduce((sum, next) => sum + next);
 }
 
 const result = solve();
