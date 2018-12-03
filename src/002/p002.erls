@@ -6,3 +6,4 @@ solve({Last, SLast, Acc}) -> solve({Last + SLast, Last, sum_if_even(Last, Acc)})
 
 main([]) -> 
   io:format("~p~n", [solve({1, 1, 0})]).
+  
