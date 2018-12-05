@@ -16,3 +16,10 @@ solve() ->
     reverse(usort(
         flatmap(fun(X)-> make_list(X) end, 
                 seq(999, 99, -1))))).
+
+% TODO:
+% 1> c(p004).
+% {ok,p004}
+% 2> p004:solve().
+% ** exception error: undefined function lists:search/2
+% 3> 
