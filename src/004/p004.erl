@@ -1,5 +1,6 @@
-
+-module(p004).
 -import(lists, [duplicate/2, flatmap/2, reverse/1, search/2, seq/3, usort/1, zipwith/3]).
+-export([solve/0]).
 
 prod_is_palindrome(C) when C rem 10 == 0 -> false;
 prod_is_palindrome(C) -> 
@@ -15,5 +16,3 @@ solve() ->
     reverse(usort(
         flatmap(fun(X)-> make_list(X) end, 
                 seq(999, 99, -1))))).
-
-main([]) -> io:format("~p~n", [element(2, solve())]).
