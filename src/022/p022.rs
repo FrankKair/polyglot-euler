@@ -1,18 +1,26 @@
 use std::fs::File;
 use std::io::Read;
 
-fn solve() -> i32 {
+fn load_names() -> Vec<String> {
     let mut contents = String::new();
     File::open("p022_names.txt")
         .expect("File not found")
         .read_to_string(&mut contents)
         .expect("Error reading");
 
-    let filtered = contents.replace("\"", " ").replace(" ", "");
-    let mut names = filtered.split(',').collect::<Vec<&str>>();
+    let mut names = contents
+                        .replace("\"", " ")
+                        .replace(" ", "")
+                        .split(',')
+                        .map(|s| s.to_string())
+                        .collect::<Vec<String>>();
     names.sort();
-
     names
+}
+
+
+fn solve() -> i32 {
+    load_names()
         .into_iter()
         .enumerate()
         .map(|(i, name)| {
