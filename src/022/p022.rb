@@ -13,7 +13,7 @@ def solve
                 
     (index + 1) * bytes
   end
-name_scores.reduce(:+)
+  name_scores.reduce(:+)
 end
 
 puts solve
