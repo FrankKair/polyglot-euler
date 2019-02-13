@@ -9,8 +9,7 @@ fn load_names() -> Vec<String> {
         .expect("Error reading");
 
     let mut names = contents
-                        .replace("\"", " ")
-                        .replace(" ", "")
+                        .replace("\"", "")
                         .split(',')
                         .map(|s| s.to_string())
                         .collect::<Vec<String>>();
