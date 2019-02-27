@@ -18,6 +18,7 @@
 - JavaScript
 - Julia
 - Lua
+- Objective-C
 - Python
 - Perl
 - ReasonML
