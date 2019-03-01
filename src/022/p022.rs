@@ -17,7 +17,6 @@ fn load_names() -> Vec<String> {
     names
 }
 
-
 fn solve() -> i32 {
     load_names()
         .into_iter()
