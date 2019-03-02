@@ -1,4 +1,3 @@
-#!/usr/bin/env elixir
 defmodule Problem009 do
   defp pythagorean(n) when n > 0 do
     for a <- 1..n,

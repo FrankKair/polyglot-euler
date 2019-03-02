@@ -1,6 +1,4 @@
-#!/usr/bin/env elixir
 defmodule Problem018 do
-
   @triangle [
     [75],
     [95, 64],

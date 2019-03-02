@@ -1,4 +1,3 @@
-#!/usr/bin/env elixir
 defmodule Problem012 do
   defp numbers(), do: Stream.unfold(1, fn(x) -> {x, x+1} end)
 

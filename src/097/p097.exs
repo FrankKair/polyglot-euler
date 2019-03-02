@@ -1,4 +1,3 @@
-#!/usr/bin/env elixir
 defmodule Problem097 do
 
   defp pow_mod10000000000(_, 0), do: 1

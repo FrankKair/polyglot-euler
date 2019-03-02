@@ -1,5 +1,4 @@
-#!/usr/bin/env elixir
-defmodule Problem048 do
+ defmodule Problem048 do
 
   defp pow_mod10000000000(_, 0), do: 1
   defp pow_mod10000000000(x, n) when rem(n, 2) != 0 do

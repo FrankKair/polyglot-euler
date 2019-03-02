@@ -1,5 +1,4 @@
-#!/usr/bin/env elixir
-defmodule Problem055 do
+ defmodule Problem055 do
   defp reverse_number(x) do
     x
     |> Integer.to_string()

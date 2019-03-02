@@ -1,4 +1,3 @@
-#!/usr/bin/env elixir
 defmodule Problem028 do
   defp spiral_diag_sum(1), do: 1
   defp spiral_diag_sum(2), do: 10

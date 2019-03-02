@@ -1,6 +1,4 @@
-#!/usr/bin/env elixir
 defmodule Problem017 do
-
   defp unit2string([x]) do
     case x do
       1 -> "one"
