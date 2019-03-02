@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 class Integer
   def triangle_number
     (1..self).reduce(:+)

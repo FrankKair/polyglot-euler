@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 def names
   File.read("p022_names.txt").split(",").sort
 end

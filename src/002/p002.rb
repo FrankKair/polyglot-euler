@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 def solve
   sum = 0
   a = 1

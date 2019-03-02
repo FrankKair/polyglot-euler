@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 def solve
   number = 3
   a = 1
