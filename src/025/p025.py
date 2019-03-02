@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 def solve():
     index = 3
     a = 1

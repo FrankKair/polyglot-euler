@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 def palindrome(x):
     return str(x) == str(x)[::-1]
 

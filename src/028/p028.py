@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 def solve():
     return sum(4 * x * x - (6 * (x - 1)) for x in range(3, 1003, 2))
 

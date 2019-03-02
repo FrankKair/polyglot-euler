@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-
-
 def words(n):
     u = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',\
         'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', \
