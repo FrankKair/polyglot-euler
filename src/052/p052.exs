@@ -1,5 +1,4 @@
-#!/usr/bin/env elixir
-defmodule Problem052 do
+ defmodule Problem052 do
   defp sorted_digits(x), do: x |> Integer.digits() |> Enum.sort()
 
   defp condition(x) do

@@ -1,4 +1,3 @@
-#!/usr/bin/env elixir
 defmodule Problem019 do
   def is_leap_year(year) when rem(year, 400) == 0, do: true
   def is_leap_year(year) when rem(year, 100) == 0, do: false

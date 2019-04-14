@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 def names
   File.read("p022_names.txt").split(",").sort
 end
@@ -13,7 +11,7 @@ def solve
                 
     (index + 1) * bytes
   end
-name_scores.reduce(:+)
+  name_scores.reduce(:+)
 end
 
 puts solve

@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 class Integer
   def factors
     factors = [1]

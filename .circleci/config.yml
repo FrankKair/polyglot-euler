@@ -1,26 +1,20 @@
 version: 2
 
 aliases:
-  - &install-cmake
-    run:
-      name: Install CMake
-      command: sudo apt-get install cmake
   - &install-linguist
     run:
       name: Install github-linguist
-      command: gem install github-linguist
+      command: |
+        sudo apt-get install cmake
+        gem install github-linguist:7.0.0
   - &run-linguist
     run:
       name: Run github-linguist on repository
-      command: linguist
+      command: github-linguist
   - &generate-html-chart
     run:
-      name: Run script that generates html chart file
-      command: ./chart.sh
-  - &move-chart-file
-    run:
-      name: Moving generated chart file to artifacts directory
-      command: mv chart.html /tmp/
+      name: Generate language chart html file
+      command: ./scripts/chart.sh > /tmp/chart.html
   - &store-artifact
     store_artifacts:
       path: /tmp/chart.html
@@ -34,9 +28,7 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - <<: *install-cmake
       - <<: *install-linguist
       - <<: *run-linguist
       - <<: *generate-html-chart
-      - <<: *move-chart-file
       - <<: *store-artifact

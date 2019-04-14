@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 function solve() {
   let sum = 0
   let a = 1

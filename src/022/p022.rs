@@ -1,17 +1,24 @@
 use std::fs::File;
 use std::io::Read;
 
-fn solve() -> i32 {
-    let filename = "p022_names.txt";
-    let mut file = File::open(filename).expect("File not found.");
+fn load_names() -> Vec<String> {
     let mut contents = String::new();
-    file.read_to_string(&mut contents).expect("Error reading file.");
+    File::open("p022_names.txt")
+        .expect("File not found")
+        .read_to_string(&mut contents)
+        .expect("Error reading");
 
-    let filtered_name_list = contents.replace("\"", " ").replace(" ", "");
-    let mut names = filtered_name_list.split(',').collect::<Vec<&str>>();
+    let mut names = contents
+                        .replace("\"", "")
+                        .split(',')
+                        .map(|s| s.to_string())
+                        .collect::<Vec<String>>();
     names.sort();
-
     names
+}
+
+fn solve() -> i32 {
+    load_names()
         .into_iter()
         .enumerate()
         .map(|(i, name)| {

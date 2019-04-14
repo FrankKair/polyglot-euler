@@ -1,4 +1,3 @@
-#!/usr/bin/env elixir
 defmodule Problem005 do
   defp gcd(x, 0), do: x
   defp gcd(x, y), do: gcd(y, rem(x, y))

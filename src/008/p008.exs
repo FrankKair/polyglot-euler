@@ -1,4 +1,3 @@
-#!/usr/bin/env elixir
 defmodule Problem008 do
   def solve do
     "73167176531330624919225119674426574742355349194934

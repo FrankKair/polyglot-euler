@@ -1,4 +1,3 @@
-#!/usr/bin/env elixir
 defmodule Problem016 do
   def solve do
     :math.pow(2, 1000)

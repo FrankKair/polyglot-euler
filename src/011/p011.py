@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import operator, re
 from functools import reduce
 prod = lambda values: reduce(operator.mul, map(int, values))

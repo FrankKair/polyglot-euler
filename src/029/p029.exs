@@ -1,4 +1,3 @@
-#!/usr/bin/env elixir
 defmodule Problem029 do
   defp generate_powers() do
     for a <- 2..100,

@@ -1,4 +1,3 @@
-#!/usr/bin/env elixir
 defmodule Problem010 do
   defp is_prime(2), do: true
   defp is_prime(x) when x > 2 do

@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-
-
 def collatz(n):
     seq = [n]
     while n > 1:

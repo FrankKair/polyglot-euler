@@ -1,4 +1,3 @@
-#!/usr/bin/env elixir
 defmodule Problem024 do
   defp factorial(1), do: 1
   defp factorial(x) when is_integer(x) and x > 1, do: x*factorial(x-1)
