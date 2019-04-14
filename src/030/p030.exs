@@ -1,5 +1,4 @@
-#!/usr/bin/env elixir
-defmodule Problem030 do
+ defmodule Problem030 do
   defp digits_fifth_power(x) do
     x
     |> Integer.digits()

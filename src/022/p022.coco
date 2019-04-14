@@ -1,0 +1,9 @@
+parse = open ..> .read() ..> .split(",") ..> sorted
+
+score = .[1:-1] ..> map$(ord ..> (+)$(-64)) ..> reduce$(+)
+
+names = zip$(range(1, 6000)) ..> starmap$(*) ..> reduce$(+)
+
+solve = "p022_names.txt" |> parse |> map$(score) |> names
+
+solve |> print

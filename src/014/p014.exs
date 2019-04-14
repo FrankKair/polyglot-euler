@@ -1,4 +1,3 @@
-#!/usr/bin/env elixir
 defmodule Problem014 do
   defp collatz_sequence(n, l) when n <= 1, do: l
   defp collatz_sequence(n, l) when n > 1 do

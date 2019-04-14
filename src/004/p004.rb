@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 class Integer
   def palindrome?
     self == to_s.reverse.to_i

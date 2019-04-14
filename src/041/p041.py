@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from math import sqrt
 from itertools import permutations
 

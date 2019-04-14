@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 function solve() {
   return Array(999)
     .fill(0)

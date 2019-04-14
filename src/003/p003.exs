@@ -1,4 +1,3 @@
-#!/usr/bin/env elixir
 defmodule Problem003 do
   defp prime?(x) when x in [2, 3, 7, 11, 13, 17], do: true
   defp prime?(x) do

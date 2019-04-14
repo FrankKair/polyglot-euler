@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 from datetime import datetime, timedelta
 
 date = datetime(1901, 1, 6)

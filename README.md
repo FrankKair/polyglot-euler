@@ -2,7 +2,6 @@
 
 [Project Euler](https://projecteuler.net) solutions in different programming languages.
 
-- Bash
 - C
 - C++
 - Clojure
@@ -19,6 +18,7 @@
 - JavaScript
 - Julia
 - Lua
+- Objective-C
 - Python
 - Perl
 - ReasonML
@@ -27,6 +27,7 @@
 - Rust
 - Scala
 - Scheme
+- Shell
 - Swift
 - TypeScript
 

@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 class Integer
   def factorial
     return 1 if zero?

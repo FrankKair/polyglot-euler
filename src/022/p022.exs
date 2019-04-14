@@ -1,6 +1,4 @@
-#!/usr/bin/env elixir
 defmodule Problem022 do
-
   defp read_names_file() do
     {:ok, names} = File.read("p022_names.txt")
     names

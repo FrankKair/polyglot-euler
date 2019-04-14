@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 def collatz(num)
   seq = [num]
   while num > 1

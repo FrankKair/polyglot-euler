@@ -1,4 +1,3 @@
-#!/usr/bin/env elixir
 defmodule Problem001 do
   def solve do
     1..999

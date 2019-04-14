@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 prod = 0
 for a in range(1, 1001):
     for b in range(a + 1, 1001):

@@ -1,4 +1,3 @@
-#!/usr/bin/env elixir
 defmodule Problem145 do
   defp is_reversible(x) when rem(x, 10) == 0, do: false
   defp is_reversible(x) do

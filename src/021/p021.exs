@@ -1,4 +1,3 @@
-#!/usr/bin/env elixir
 defmodule Problem021 do
   defp divisors(x, n, divisors) when n == x, do: divisors
   defp divisors(x, n, divisors) when rem(x, n) == 0, do: divisors(x, n+1, [n | divisors])

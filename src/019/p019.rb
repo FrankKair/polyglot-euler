@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 require 'date'
 
 date = Date.new(1901, 1, 6)

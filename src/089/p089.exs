@@ -1,5 +1,4 @@
-#!/usr/bin/env elixir
-defmodule Problem089 do
+ defmodule Problem089 do
   defp read_numbers_file() do
     {:ok, numbers} = File.read("p089_roman.txt")
     numbers
