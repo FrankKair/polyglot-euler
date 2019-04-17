@@ -30,6 +30,7 @@
 - Shell
 - Swift
 - TypeScript
+- Zig
 
 ### Contributing and adding new problems
 
