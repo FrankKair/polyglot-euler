@@ -8,6 +8,6 @@
 (defn sum-digits [n]
    (transduce (map char-to-num) + 0 (str n)))
 
-(def solve (comp prn sum-digits int-pow))
+(defn solve [] (sum-digits (int-pow 2 1000)))
 
-(solve 2 1000)
+(prn (solve))

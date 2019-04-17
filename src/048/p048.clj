@@ -16,7 +16,7 @@
     +
     (range 1 (inc x))))
 
-(defn solve [x]
-  (->> x sum-series only-last-10-digits str println))
+(defn solve []
+  (->> 1000 sum-series only-last-10-digits str))
 
-(solve 1000)
+(println (solve))

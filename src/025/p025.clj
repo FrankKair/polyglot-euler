@@ -10,7 +10,6 @@
   (->> init
        (iterate fib-step)
        (drop-while ready?)
-       ffirst
-       prn))
+       ffirst))
 
-(solve)
+(prn (solve))
