@@ -401,3 +401,17 @@ const result = solve()
 console.log(result)
 ```
 
+### Zig
+
+You should probably use `zig fmt file.zig` to format your file
+
+```zig
+const std = @import("std");
+const warn = std.debug.warn;
+
+pub fn main() void {
+    // Solution logic
+    warn("{}\n", result);
+}
+
+```
