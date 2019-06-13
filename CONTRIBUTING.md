@@ -140,6 +140,18 @@ solve() ->
   % Call other functions
 ```
 
+### F#
+
+```fsharp
+
+let f x = // Body
+
+let solve = // Call other functions
+
+printfn "%i" solve // For printing integers
+
+```
+
 ### Futhark
 
 ```futhark

@@ -10,6 +10,7 @@
 - D
 - Elixir
 - Erlang
+- F#
 - Futhark
 - Go
 - Groovy
