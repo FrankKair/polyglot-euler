@@ -1,7 +1,7 @@
 fn solve() -> i32 {
-    let sum_of_the_squares: i32 = (0..101).map(|x| x * x).sum();
-    let square_of_the_sum: i32 = (0..101).sum::<i32>().pow(2);
-    square_of_the_sum - sum_of_the_squares
+    let (sum, sum_of_sq): (i32, i32) =
+        (0..101).fold((0, 0), |acc, x| (acc.0 + x, acc.1 + x.pow(2)));
+    sum.pow(2) - sum_of_sq
 }
 
 fn main() {
