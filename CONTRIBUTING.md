@@ -372,7 +372,7 @@ object Main {
 
 ```
 
-### Sheme
+### Scheme
 ```scheme
 (define func)
 
