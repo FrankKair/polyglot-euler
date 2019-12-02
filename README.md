@@ -20,9 +20,9 @@
 - Julia
 - Lua
 - Objective-C
+- OCaml
 - Python
 - Perl
-- ReasonML
 - Red
 - Ruby
 - Rust

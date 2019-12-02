@@ -282,6 +282,43 @@ local result = solve()
 print(result)
 ```
 
+### Objective-C
+
+```objective-c
+#import <Foundation/Foundation.h>
+
+@interface Problem001 : NSObject
+- (int) solve;
+@end
+
+@implementation Problem001
+- (int) solve {
+  ...
+}
+@end
+
+int main() {
+  @autoreleasepool {
+    Problem001 *p = [[Problem001 alloc] init];
+    int result = [p solve];
+    NSLog(@"%d", result);
+  }
+}
+```
+
+### OCaml
+
+```ocaml
+Open Base
+Open Stdio
+
+let solve =
+  ...
+
+let () =
+  printf "%d\n" solve
+```
+
 ### Perl
 
 ```perl
