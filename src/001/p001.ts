@@ -1,12 +1,13 @@
 function solve(): number {
-  let sum: number = 0
+  let sum = 0;
   for (let i: number = 0; i < 1000; i++) {
     if (i % 3 == 0 || i % 5 == 0) {
-      sum += i
+      sum += i;
     }
   }
-  return sum
+
+  return sum;
 }
 
-const result = solve()
-console.log(result)
+const result = solve();
+console.log(result);
