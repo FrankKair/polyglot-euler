@@ -11,7 +11,7 @@ fn load_names() -> Vec<String> {
     let mut names = contents
                         .replace("\"", "")
                         .split(',')
-                        .map(|s| s.to_string())
+                        .map(str::to_string)
                         .collect::<Vec<String>>();
     names.sort();
     names
