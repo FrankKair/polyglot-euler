@@ -308,6 +308,14 @@ int main() {
 
 ### OCaml
 
+Use [dune](https://github.com/ocaml/dune) to build OCaml programs with the following:
+
+```
+(executable
+ (name      p___)
+ (libraries base stdio core))
+```
+
 ```ocaml
 Open Base
 Open Stdio
