@@ -17,15 +17,18 @@ fn load_names() -> Vec<String> {
     names
 }
 
+fn name_score(pair: (usize, String)) -> i32 {
+    let (i, name) = pair;
+    let bytes: i32 = name.bytes().map(|c| (c as i32) - 64).sum();
+    let index = (i + 1) as i32;
+    bytes * index
+}
+
 fn solve() -> i32 {
     load_names()
         .into_iter()
         .enumerate()
-        .map(|(i, name)| {
-            let bytes: i32 = name.bytes().map(|c| (c as i32) - 64).sum();
-            let index = (i + 1) as i32;
-            bytes * index
-        })
+        .map(name_score)
         .sum()
 }
 
