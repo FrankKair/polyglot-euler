@@ -11,17 +11,17 @@ function loadNames() {
   return sortedNames;
 }
 
-function solve() {
-  const names = loadNames();
-  const scores = names.map((name, index) => {
-    let nameScore = 0;
-    for (let i = 0; i < name.length; i++) {
-      nameScore += name.charCodeAt(i) - 64;
-    }
-    return nameScore * (index + 1);
-  });
+function score(name, index) {
+  let nameScore = 0;
+  for (let i = 0; i < name.length; i++) {
+    nameScore += name.charCodeAt(i) - 64;
+  }
+  return nameScore * (index + 1);
+}
 
-  return scores.reduce((sum, next) => sum + next);
+function solve() {
+  const sum = (acc, next) => acc + next;
+  return loadNames().map(score).reduce(sum);
 }
 
 const result = solve();
