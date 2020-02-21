@@ -11,4 +11,4 @@ let solve =
     fib 1 1 0
 
 let () =
-  printf "%d\n" solve
+  printf "%d\n" solve;;

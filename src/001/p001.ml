@@ -7,4 +7,4 @@ let solve =
   |> List.fold ~init:0 ~f:(+)
 
 let () =
-  printf "%d\n" solve
+  printf "%d\n" solve;;

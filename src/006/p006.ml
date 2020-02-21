@@ -19,4 +19,4 @@ let solve =
   sq_of_sum - sum_of_sqs
 
 let () =
-  printf "%d\n" solve
+  printf "%d\n" solve;;
