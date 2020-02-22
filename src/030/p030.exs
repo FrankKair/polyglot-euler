@@ -8,7 +8,7 @@
 
   def solve do
     Stream.iterate(2, &(&1+1))
-    |> Enum.take_while(&(&1 < 200_000))
+    |> Stream.take_while(&(&1 < 200_000))
     |> Stream.filter(&(&1 == digits_fifth_power(&1)))
     |> Enum.sum()
   end
