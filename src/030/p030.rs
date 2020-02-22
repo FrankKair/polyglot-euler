@@ -19,5 +19,5 @@ fn solve() -> i32 {
 
 fn main() {
     let result = solve();
-    println!("{:?}", result);
+    println!("{}", result);
 }

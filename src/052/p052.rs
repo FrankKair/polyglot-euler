@@ -1,6 +1,8 @@
 fn digits(number: u32) -> Vec<u32> {
     let temp = number.to_string();
-    let mut digits = temp.chars().map(|d| d.to_digit(10).unwrap()).collect::<Vec<u32>>();
+    let mut digits = temp.chars()
+                         .map(|d| d.to_digit(10).unwrap())
+                         .collect::<Vec<u32>>();
     digits.sort();    
     digits
 }
