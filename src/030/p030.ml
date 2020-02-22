@@ -12,7 +12,8 @@ let digits n =
 let sum = List.fold ~init:(0) ~f:(+)
 
 let digits_fifth_power n =
-  List.map ~f:(fun x -> Int.pow x 5) (digits n)
+  digits n
+  |> List.map ~f:(fun x -> Int.pow x 5)
   |> sum
 
 let solve =
