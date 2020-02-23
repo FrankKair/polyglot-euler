@@ -6,9 +6,9 @@ palindrome s = reverse s == s
 
 doubleBasePalindrome :: Integer -> Bool
 doubleBasePalindrome n =
-  palindrome base10 && palindrome base2 where
-  base10 = show n
-  base2 = showIntAtBase 2 intToDigit n ""
+  palindrome base10 && palindrome base2
+  where base10 = show n
+        base2 = showIntAtBase 2 intToDigit n ""
 
 solve :: Integer
 solve = sum $ filter (\x -> doubleBasePalindrome x) [1..1000000]
