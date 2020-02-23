@@ -1,15 +1,13 @@
-digitsOfNumber :: Integer -> [Integer]
-digitsOfNumber n =
-    map (\x -> read [x] :: Integer) (show n)
+import Data.Digits
 
 sumDigitsOfNumber :: Integer -> Integer
-sumDigitsOfNumber n =
-    sum $ digitsOfNumber n
+sumDigitsOfNumber n = sum $ digits 10 n
 
 factorial :: Integer -> Integer
-factorial n =
-    product [1..n]
+factorial n = product [1..n]
+
+solve :: Integer
+solve = sumDigitsOfNumber $ factorial 100
 
 main :: IO ()
-main =
-    print $ sumDigitsOfNumber $ factorial 100
+main = print $ solve
