@@ -9,7 +9,7 @@ let digits n =
   | 0 -> [0]
   | _ -> loop n []
 
-let sum = List.fold ~init:(0) ~f:(+)
+let sum = List.reduce ~f:(+)
 
 let digits_fifth_power n =
   digits n
