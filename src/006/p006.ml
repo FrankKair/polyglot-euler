@@ -3,7 +3,7 @@ open Stdio
 
 let squared x = x * x
 
-let sum = List.reduce ~f:(+)
+let sum = List.fold ~init:0 ~f:(+)
 
 let sum_of_sqs =
   List.range 1 101
@@ -19,4 +19,4 @@ let solve =
   sq_of_sum - sum_of_sqs
 
 let () =
-  printf "%d\n" solve;;
+  printf "%d\n" solve
