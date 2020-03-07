@@ -1,10 +1,3 @@
-(*
-dune
-
-(executable
-  (name p022)
-  (libraries base core_kernel str stdio))
-*)
 open Core_kernel
 open Stdio
 
