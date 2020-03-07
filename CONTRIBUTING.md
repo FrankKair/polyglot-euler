@@ -14,8 +14,6 @@ Files should be named following the pattern p001.cpp, p035.rs, p110.swift, etc.
 ### Bash
 
 ```bash
-#!/usr/bin/env bash
-
 function() {
     # Body
 }
@@ -114,7 +112,6 @@ void main() {
 ### Elixir
 
 ```elixir
-#!/usr/bin/env elixir
 defmodule Problem001 do
   defp function(x) do
     # Body
@@ -237,7 +234,6 @@ public final class p001 {
 ### JavaScript
 
 ```javascript
-#!/usr/bin/env node
 function func(x) {
   // Body
 }
@@ -269,7 +265,6 @@ println(result)
 ### Lua
 
 ```lua
-#!/usr/bin/env lua
 function func(x)
   -- Body
 end
@@ -313,7 +308,7 @@ Use [dune](https://github.com/ocaml/dune) to build OCaml programs with the follo
 ```
 (executable
  (name      p___)
- (libraries base stdio core))
+ (libraries base core_kernel stdio))
 ```
 
 ```ocaml
@@ -330,7 +325,6 @@ let () =
 ### Perl
 
 ```perl
-#!/usr/bin/env perl
 use strict;
 
 sub function(x) {
@@ -348,7 +342,6 @@ print($result);
 ### Python
 
 ```python
-#!/usr/bin/env python3
 def function(x):
     # Body
 
@@ -385,7 +378,6 @@ Use the gem `rubocop` (`$ gem install rubocop`).
 Run `$ rubocop --auto-correct` before commit.
 
 ```ruby
-#!/usr/bin/env ruby
 def function
   # Body
 end
